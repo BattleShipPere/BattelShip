@@ -64,7 +64,7 @@ namespace BattelShip
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.table_tablero.Size = new System.Drawing.Size(713, 644);
+            this.table_tablero.Size = new System.Drawing.Size(500, 500);
             this.table_tablero.TabIndex = 0;
             // 
             // Form1
