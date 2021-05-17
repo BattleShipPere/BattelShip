@@ -47,7 +47,7 @@ namespace BattelShip
             this.table_tablero.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.table_tablero.Location = new System.Drawing.Point(221, 126);
+            this.table_tablero.Location = new System.Drawing.Point(147, 49);
             this.table_tablero.Name = "table_tablero";
             this.table_tablero.RowCount = 10;
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -70,7 +70,7 @@ namespace BattelShip
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.table_tablero);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Form1";
             this.Text = "Form1";
