@@ -18,7 +18,7 @@ namespace BattelShip
             table_tablero.Location = new Point(this.Width/2 - table_tablero.Width/2, this.Height/2 - table_tablero.Height/2);
         }
         // HACIENDO UN MERGE DESDE MI RAMA -PABLO 
-
+        //Probando comentario Alex
         private void Form1_Resize(object sender, EventArgs e)
         {
             table_tablero.Location = new Point(this.Width / 2 - table_tablero.Width / 2, this.Height / 2 - table_tablero.Height / 2);
