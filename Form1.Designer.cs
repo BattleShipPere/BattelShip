@@ -77,6 +77,7 @@ namespace BattelShip
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackgroundImage = global::BattelShip.Properties.Resources.submarine;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(622, 144);
             this.pictureBox4.Name = "pictureBox4";
@@ -86,6 +87,7 @@ namespace BattelShip
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackgroundImage = global::BattelShip.Properties.Resources.patrol;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(722, 256);
             this.pictureBox3.Name = "pictureBox3";
@@ -95,6 +97,7 @@ namespace BattelShip
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImage = global::BattelShip.Properties.Resources.destroyer;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(672, 200);
             this.pictureBox2.Name = "pictureBox2";
@@ -104,6 +107,7 @@ namespace BattelShip
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::BattelShip.Properties.Resources.carrier;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(572, 88);
             this.pictureBox1.Name = "pictureBox1";
