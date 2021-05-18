@@ -21,7 +21,7 @@ namespace BattelShip
             table_tablero.Location = new Point(this.Width/3 - table_tablero.Width/2, this.Height/2 - table_tablero.Height/2);
             table_tablero.BackColor = Color.FromArgb(116, 185, 255);
             nombresCasillas = new List<string>();
-            crearLabels();
+            CrearLabels();
         }
       
 
@@ -30,7 +30,7 @@ namespace BattelShip
             table_tablero.Location = new Point(this.Width / 3 - table_tablero.Width / 2, this.Height / 2 - table_tablero.Height / 2);
         }
 
-        private void crearLabels()
+        private void CrearLabels()
         {
 
             int totalCols = table_tablero.ColumnCount;
