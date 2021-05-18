@@ -12,12 +12,15 @@ namespace BattelShip
 {
     public partial class Form1 : Form
     {
-      
+
+        List<string> nombresCasillas;
+
         public Form1()
         {
             InitializeComponent();
             table_tablero.Location = new Point(this.Width/3 - table_tablero.Width/2, this.Height/2 - table_tablero.Height/2);
-
+            table_tablero.BackColor = Color.FromArgb(116, 185, 255);
+            nombresCasillas = new List<string>();
             crearLabels();
         }
       
@@ -29,6 +32,7 @@ namespace BattelShip
 
         private void crearLabels()
         {
+
             int totalCols = table_tablero.ColumnCount;
             int totalRows = table_tablero.RowCount;
 
@@ -36,15 +40,67 @@ namespace BattelShip
             {
                 for (int u = 0; u < totalRows; u++)
                 {
-                    Label lab = new Label();
-                    lab.Dock = DockStyle.Fill;
+                    PictureBox pic_Box = new PictureBox();
+                    pic_Box.Dock = DockStyle.Fill;
+                    pic_Box.AllowDrop = true;
 
-                    lab.Text = u + "" + i;
-                    lab.TextAlign = ContentAlignment.MiddleCenter;
-                    table_tablero.Controls.Add(lab, i, u);
+                    void pic_Box_DragEnter(object sender, DragEventArgs e)
+                    {
+                        //metodo comprobar casilla
+                        if(comprobarCasilla(""))
+                        {
+                            pic_Box.BackColor = Color.FromArgb(32, 191, 107);
+                        }
+                        else
+                        {
+                            pic_Box.BackColor = Color.FromArgb(252, 92, 101);
+                        }
+
+                        
+                        e.Effect = DragDropEffects.Copy;
+                    }
+
+                    void pic_Box_DragLeave(object sender, EventArgs e)
+                    {
+                        pic_Box.BackColor = Color.FromArgb(116, 185, 255);
+                    }
+
+                    void pic_Box_DragDrop(object sender, DragEventArgs e)
+                    {
+                        //pic_Box.BackgroundImage = (Image)e.Data.GetData(DataFormats.Bitmap);
+                        pic_Box.BackColor = Color.FromArgb(116, 185, 255);
+                        Console.WriteLine(pic_Box.Name);
+                        nombresCasillas.Add(pic_Box.Name);
+                    }
+
+                    pic_Box.DragEnter += new DragEventHandler(pic_Box_DragEnter);
+                    pic_Box.DragLeave += new EventHandler(pic_Box_DragLeave);
+                    pic_Box.DragDrop += new DragEventHandler(pic_Box_DragDrop);
+
+                    pic_Box.Name = "pic_Box" + u + "" + i;
+                    pic_Box.BackgroundImageLayout = ImageLayout.Stretch;
+
+                    //picBox.Text = u + "" + i;
+                    table_tablero.Controls.Add(pic_Box, i, u);
+
+                    //Console.WriteLine(pic_Box.Name);
+
                 }
 
             }
+
+        }
+
+        private void pic_Barcos_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+            DoDragDrop(pic_Carrier.BackgroundImage, DragDropEffects.Copy);
+
+        }
+
+        private bool comprobarCasilla(String casilla)
+        {
+            return false;
         }
 
     }
