@@ -62,6 +62,7 @@ namespace BattelShip
             this.Button_Start.Size = new System.Drawing.Size(218, 107);
             this.Button_Start.TabIndex = 1;
             this.Button_Start.UseVisualStyleBackColor = false;
+            this.Button_Start.Click += new System.EventHandler(this.Button_Start_Click);
             // 
             // Button_Exit
             // 
@@ -78,6 +79,7 @@ namespace BattelShip
             this.Button_Exit.Size = new System.Drawing.Size(218, 107);
             this.Button_Exit.TabIndex = 4;
             this.Button_Exit.UseVisualStyleBackColor = false;
+            this.Button_Exit.Click += new System.EventHandler(this.Button_Exit_Click);
             // 
             // Form2_PantallaInicial
             // 

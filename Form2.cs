@@ -16,5 +16,18 @@ namespace BattelShip
         {
             InitializeComponent();
         }
+
+        private void Button_Start_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            Form2_PantallaInicial f2 = new Form2_PantallaInicial();
+            Visible = false;
+        }
+
+        private void Button_Exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace BattelShip
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.table_tablero = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -126,6 +127,7 @@ namespace BattelShip
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.table_tablero);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Form1";
