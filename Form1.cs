@@ -14,6 +14,7 @@ namespace BattelShip
     {
 
         List<string> nombresCasillas;
+        List<int> celdas;
 
         public Form1()
         {
@@ -21,10 +22,10 @@ namespace BattelShip
             table_tablero.Location = new Point(this.Width/3 - table_tablero.Width/2, this.Height/2 - table_tablero.Height/2);
             table_tablero.BackColor = Color.FromArgb(116, 185, 255);
             nombresCasillas = new List<string>();
+            celdas = new List<int>();
             CrearLabels();
         }
       
-
         private void Form1_Resize(object sender, EventArgs e)
         {
             table_tablero.Location = new Point(this.Width / 3 - table_tablero.Width / 2, this.Height / 2 - table_tablero.Height / 2);
@@ -32,7 +33,6 @@ namespace BattelShip
 
         private void CrearLabels()
         {
-
             int totalCols = table_tablero.ColumnCount;
             int totalRows = table_tablero.RowCount;
 
@@ -47,14 +47,7 @@ namespace BattelShip
                     void pic_Box_DragEnter(object sender, DragEventArgs e)
                     {
                         //metodo comprobar casilla
-                        if(comprobarCasilla(""))
-                        {
-                            pic_Box.BackColor = Color.FromArgb(32, 191, 107);
-                        }
-                        else
-                        {
-                            pic_Box.BackColor = Color.FromArgb(252, 92, 101);
-                        }
+                        posicionBarco(pic_Box);
 
                         
                         e.Effect = DragDropEffects.Copy;
@@ -77,7 +70,11 @@ namespace BattelShip
                     pic_Box.DragLeave += new EventHandler(pic_Box_DragLeave);
                     pic_Box.DragDrop += new DragEventHandler(pic_Box_DragDrop);
 
-                    pic_Box.Name = "pic_Box" + u + "" + i;
+                    pic_Box.Name = i + "" + u;
+                    //anyadir al list
+                    int coordenadas = Int32.Parse(pic_Box.Name);
+
+
                     pic_Box.BackgroundImageLayout = ImageLayout.Stretch;
 
                     //picBox.Text = u + "" + i;
@@ -100,6 +97,39 @@ namespace BattelShip
         {
             DoDragDrop(pic_Carrier.BackgroundImage, DragDropEffects.Copy);
         }
+
+        private void butSiguiente_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private bool posicionBarco(PictureBox pic)
+        {
+            TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
+            Console.WriteLine(pic.Name);
+            Console.WriteLine(posicionCelda);
+
+            if(posicionCelda.Column > 6)
+            {
+                pic.BackColor = Color.FromArgb(252, 92, 101);
+            }
+            else
+            {
+                pic.BackColor = Color.FromArgb(32, 191, 107);
+
+                for (int i = 1; i < 4; i++)
+                {
+                    posicionCelda.Column++;
+                    Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
+                    c.BackColor = Color.FromArgb(32, 191, 107);
+
+                }
+
+            }
+            return true;
+            
+        }
+        
     }
 
 }
