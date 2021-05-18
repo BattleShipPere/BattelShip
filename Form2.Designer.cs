@@ -1,7 +1,7 @@
 ﻿
 namespace BattelShip
 {
-    partial class Form2
+    partial class Form2_PantallaInicial
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace BattelShip
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2_PantallaInicial));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Button_Start = new System.Windows.Forms.Button();
             this.Button_Exit = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@ namespace BattelShip
             this.Button_Exit.TabIndex = 4;
             this.Button_Exit.UseVisualStyleBackColor = false;
             // 
-            // Form2
+            // Form2_PantallaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,7 +91,7 @@ namespace BattelShip
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Button_Start);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form2";
+            this.Name = "Form2_PantallaInicial";
             this.Text = "Welcome to the BattleShilp!";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

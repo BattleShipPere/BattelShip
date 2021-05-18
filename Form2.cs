@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BattelShip
 {
-    public partial class Form2 : Form
+    public partial class Form2_PantallaInicial : Form
     {
-        public Form2()
+        public Form2_PantallaInicial()
         {
             InitializeComponent();
         }
