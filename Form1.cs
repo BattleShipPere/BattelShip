@@ -91,18 +91,15 @@ namespace BattelShip
 
         }
 
-        private void pic_Barcos_MouseDown(object sender, MouseEventArgs e)
-        {
-            
-            DoDragDrop(pic_Carrier.BackgroundImage, DragDropEffects.Copy);
-
-        }
-
         private bool comprobarCasilla(String casilla)
         {
             return false;
         }
 
+        private void pic_Carrier_MouseDown(object sender, MouseEventArgs e)
+        {
+            DoDragDrop(pic_Carrier.BackgroundImage, DragDropEffects.Copy);
+        }
     }
 
 }

@@ -77,43 +77,44 @@ namespace BattelShip
             // 
             // pic_Submarine
             // 
-            this.pictureBox4.BackgroundImage = global::BattelShip.Properties.Resources.submarine;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(622, 144);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(150, 50);
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.pic_Submarine.BackgroundImage = global::BattelShip.Properties.Resources.submarine;
+            this.pic_Submarine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_Submarine.Location = new System.Drawing.Point(622, 144);
+            this.pic_Submarine.Name = "pic_Submarine";
+            this.pic_Submarine.Size = new System.Drawing.Size(150, 50);
+            this.pic_Submarine.TabIndex = 4;
+            this.pic_Submarine.TabStop = false;
             // 
             // pic_Patrol
             // 
-            this.pictureBox3.BackgroundImage = global::BattelShip.Properties.Resources.patrol;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(722, 256);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.pic_Patrol.BackgroundImage = global::BattelShip.Properties.Resources.patrol;
+            this.pic_Patrol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_Patrol.Location = new System.Drawing.Point(722, 256);
+            this.pic_Patrol.Name = "pic_Patrol";
+            this.pic_Patrol.Size = new System.Drawing.Size(50, 50);
+            this.pic_Patrol.TabIndex = 3;
+            this.pic_Patrol.TabStop = false;
             // 
             // pic_Destroyer
             // 
-            this.pictureBox2.BackgroundImage = global::BattelShip.Properties.Resources.destroyer;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(672, 200);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pic_Destroyer.BackgroundImage = global::BattelShip.Properties.Resources.destroyer;
+            this.pic_Destroyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_Destroyer.Location = new System.Drawing.Point(672, 200);
+            this.pic_Destroyer.Name = "pic_Destroyer";
+            this.pic_Destroyer.Size = new System.Drawing.Size(100, 50);
+            this.pic_Destroyer.TabIndex = 2;
+            this.pic_Destroyer.TabStop = false;
             // 
             // pic_Carrier
             // 
-            this.pictureBox1.BackgroundImage = global::BattelShip.Properties.Resources.carrier;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(572, 88);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pic_Carrier.BackgroundImage = global::BattelShip.Properties.Resources.carrier;
+            this.pic_Carrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_Carrier.Location = new System.Drawing.Point(572, 88);
+            this.pic_Carrier.Name = "pic_Carrier";
+            this.pic_Carrier.Size = new System.Drawing.Size(200, 50);
+            this.pic_Carrier.TabIndex = 1;
+            this.pic_Carrier.TabStop = false;
+            this.pic_Carrier.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Carrier_MouseDown);
             // 
             // Form1
             // 
