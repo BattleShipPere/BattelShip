@@ -63,6 +63,26 @@ namespace BattelShip.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boton_Exit {
+            get {
+                object obj = ResourceManager.GetObject("Boton Exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boton_Start {
+            get {
+                object obj = ResourceManager.GetObject("Boton Start", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carrier {
             get {
                 object obj = ResourceManager.GetObject("carrier", resourceCulture);
@@ -76,6 +96,26 @@ namespace BattelShip.Properties {
         internal static System.Drawing.Bitmap destroyer {
             get {
                 object obj = ResourceManager.GetObject("destroyer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Img_Tituto {
+            get {
+                object obj = ResourceManager.GetObject("Img_Tituto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Inicio {
+            get {
+                object obj = ResourceManager.GetObject("Inicio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
