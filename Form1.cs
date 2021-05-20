@@ -14,6 +14,8 @@ namespace BattelShip
     {
 
         List<string> nombresCasillas;
+        List<Control> casillasCorrectas;
+        List<Control> casillasMarcadas;
 
         public Form1()
         {
@@ -21,6 +23,8 @@ namespace BattelShip
             table_tablero.Location = new Point(this.Width/3 - table_tablero.Width/2, this.Height/2 - table_tablero.Height/2);
             table_tablero.BackColor = Color.FromArgb(116, 185, 255);
             nombresCasillas = new List<string>();
+            casillasCorrectas = new List<Control>();
+            casillasMarcadas = new List<Control>();
             CrearLabels();
         }
       
@@ -45,23 +49,32 @@ namespace BattelShip
                     void pic_Box_DragEnter(object sender, DragEventArgs e)
                     {
                         //metodo comprobar casilla
+   
                         posicionBarco(pic_Box);
-
-                        
                         e.Effect = DragDropEffects.Copy;
+
                     }
 
                     void pic_Box_DragLeave(object sender, EventArgs e)
                     {
-                        pic_Box.BackColor = Color.FromArgb(116, 185, 255);
+
+                        //pic_Box.BackColor = Color.FromArgb(116, 185, 255);
+
+
+
                     }
 
                     void pic_Box_DragDrop(object sender, DragEventArgs e)
                     {
+
                         //pic_Box.BackgroundImage = (Image)e.Data.GetData(DataFormats.Bitmap);
+
+
+
                         pic_Box.BackColor = Color.FromArgb(116, 185, 255);
                         Console.WriteLine(pic_Box.Name);
                         nombresCasillas.Add(pic_Box.Name);
+
                     }
 
                     pic_Box.DragEnter += new DragEventHandler(pic_Box_DragEnter);
@@ -86,11 +99,6 @@ namespace BattelShip
 
         }
 
-        private bool comprobarCasilla(String casilla)
-        {
-            return false;
-        }
-
         private void pic_Carrier_MouseDown(object sender, MouseEventArgs e)
         {
             DoDragDrop(pic_Carrier.BackgroundImage, DragDropEffects.Copy);
@@ -103,6 +111,7 @@ namespace BattelShip
 
         private bool posicionBarco(PictureBox pic)
         {
+
             TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
             Console.WriteLine(pic.Name);
             Console.WriteLine(posicionCelda);
@@ -113,17 +122,19 @@ namespace BattelShip
             }
             else
             {
-                pic.BackColor = Color.FromArgb(32, 191, 107);
 
-                for (int i = 1; i < 4; i++)
-                {
-                    posicionCelda.Column++;
+                for(int i = 0; i < 4; i++){
+
                     Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
                     c.BackColor = Color.FromArgb(32, 191, 107);
+                    casillasMarcadas.Add(c);
+                    Console.WriteLine(posicionCelda.Column.ToString(), posicionCelda.Row.ToString());
+                    posicionCelda.Column++;   
 
-                }
+                }               
 
             }
+
             return true;
             
         }
