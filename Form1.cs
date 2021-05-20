@@ -146,105 +146,75 @@ namespace BattelShip
                 pic.BackColor = red;
                 return;
             }
+        // Si no, la posicion es correcta, pintamos de verde y la guardamos en casillas correctas
             for (int i = 0; i < 4; i++)
             {
                 Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
-                c.BackColor = Color.FromArgb(32, 191, 107);
+                c.BackColor = green;
                 casillasCorrectas.Add(c);
-                //Console.WriteLine(posicionCelda.Column.ToString(), posicionCelda.Row.ToString());
+
+            // Dependiendo del eje seleccionado iteramos en funcion de columnas o filas
                 if (eje) posicionCelda.Column++;
                 else posicionCelda.Row++;
             }
         }
 
+    // Comprueba si la casilla esta ya ocupada
         private bool estaMarcada(PictureBox pic)
         {
-
             Control c = pic;
             if (casillasMarcadas.IndexOf(c) != -1) return true;
             return false;
-
         }
         
+    // Guardamos la posicion en casillasMarcadas 
         private void guardarCasillas(PictureBox pic)
         {
-
             TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
-            if (eje)
+           
+            for (int i = 0; i < 4; i++)
             {
-                for (int i = 0; i < 4; i++)
-                {
+                Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
+                casillasMarcadas.Add(c);
 
-                    Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
-                    casillasMarcadas.Add(c);
-                    posicionCelda.Column++;
-
-                }
+            // Dependiendo del eje seleccionado iteramos en funcion de columnas o filas
+                if (eje) posicionCelda.Column++;
+                else posicionCelda.Row++;
             }
-            else
-            {
-                for (int i = 0; i < 4; i++)
-                {
-
-                    Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
-                    casillasMarcadas.Add(c);
-                    posicionCelda.Row++;
-
-                }
-
-            }
-
-
         }
 
         private bool tieneCasillasMarcadasAlLado(PictureBox pic)
         {
-            
             TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
 
-            if (eje)
+            for (int i = 0; i < 4; i++)
             {
-                for (int i = 0; i < 4; i++)
-                {
+                Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
+                if (casillasMarcadas.IndexOf(c) != -1) return true;
 
-                    Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
-                    if (casillasMarcadas.IndexOf(c) != -1) return true;
-                    posicionCelda.Column++;
-
-                }
-
-                return false;
+            // Dependiendo del eje seleccionado iteramos en funcion de columnas o filas
+                if (eje) posicionCelda.Column++;
+                else posicionCelda.Row++;
             }
-            else //Eje y
-            {
-                for (int i = 0; i < 4; i++)
-                {
-
-                    Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
-                    if (casillasMarcadas.IndexOf(c) != -1) return true;
-                    posicionCelda.Row++;
-
-                }
-
-                return false;
-            }
-
+            return false;
         }
 
+    // Cambia el eje
         private void butRotar_Click(object sender, EventArgs e)
         {
             if (eje)
             {
                 eje = false;
                 butRotar.Text = "Eje Y";
-            }else
+            }
+            else
             {
                 eje = true;
                 butRotar.Text = "Eje X";
-
             }
-
         }
+
+    // Eventos MouseDown de las imagenes de los 4 barcos diferentes
         private void pic_Carrier_MouseDown(object sender, MouseEventArgs e)
         {
             DoDragDrop(pic_Carrier.BackgroundImage, DragDropEffects.Copy);
