@@ -70,21 +70,17 @@ namespace BattelShip
                     {
 
                         if (estaMarcada(pic_Box)) return;
-                        
-                        else if (pic_Box.BackColor == red)
-                        {
 
-                            pic_Box.BackColor = blue;
-                            return;
-
-                        }
-
-                        foreach(Control con in casillasCorrectas)
+                        pic_Box.BackColor = blue;
+                        foreach (Control con in casillasCorrectas)
                         {
 
                             con.BackColor = blue;
-                            return;
 
+                        } 
+
+                        foreach(Control con in casillasMarcadas){
+                            con.BackColor = green;
                         }
 
                     }
@@ -97,15 +93,15 @@ namespace BattelShip
                         if (pic_Box.BackColor == green)
                         {
 
-                            Control c = pic_Box;
-                            casillasMarcadas.Add(c);
+
+                            guardarCasillas(pic_Box);
 
                             return;
 
                         }
 
                         pic_Box.BackColor = Color.FromArgb(116, 185, 255);
-                        
+
                         //Console.WriteLine(pic_Box.Name);
                         //nombresCasillas.Add(pic_Box.Name);
 
@@ -127,11 +123,13 @@ namespace BattelShip
 
                     //Console.WriteLine(pic_Box.Name);
 
-                }
-
+                }    
             }
-
         }
+
+
+
+
 
         private void pic_Carrier_MouseDown(object sender, MouseEventArgs e)
         {
@@ -163,8 +161,8 @@ namespace BattelShip
 
                     Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
                     c.BackColor = Color.FromArgb(32, 191, 107);
-                    casillasMarcadas.Add(c);
-                    Console.WriteLine(posicionCelda.Column.ToString(), posicionCelda.Row.ToString());
+                    casillasCorrectas.Add(c);
+                    //Console.WriteLine(posicionCelda.Column.ToString(), posicionCelda.Row.ToString());
                     posicionCelda.Column++;   
 
                 }               
@@ -184,6 +182,21 @@ namespace BattelShip
 
         }
         
+        private void guardarCasillas(PictureBox pic)
+        {
+
+            TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
+
+            for (int i = 0; i < 4; i++)
+            {
+
+                Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
+                casillasMarcadas.Add(c);
+                posicionCelda.Column++;
+
+            }
+
+        }
     }
 
 }
