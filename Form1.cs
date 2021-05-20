@@ -12,32 +12,42 @@ namespace BattelShip
 {
     public partial class Form1 : Form
     {
+        List<Control> casillasCorrectas = new List<Control>();  // Ubicaciones no guardadas
+        List<Control> casillasMarcadas = new List<Control>();  // Ubicaciones de Barcos.
 
-        List<Control> casillasCorrectas;
-        List<Control> casillasMarcadas;
-        Color red;
-        Color green;
-        Color blue;
+    // True == Eje X ; False == Eje Y
+        bool eje = true; 
+
+    //Colores
+        Color red = Color.FromArgb(252, 92, 101);
+        Color green = Color.FromArgb(32, 191, 107);
+        Color blue = Color.FromArgb(116, 185, 255);
+
+    //Barcos sin posicion
+        Barcos portaviones = new Barcos(4, "portaviones");
+
+        Barcos submarino1 = new Barcos(3, "submarino1");
+        Barcos submarino2 = new Barcos(3, "submarino2");
+
+        Barcos destructor1 = new Barcos(2, "destructor1");
+        Barcos destructor2 = new Barcos(2, "destructor2");
+        Barcos destructor3 = new Barcos(2, "destructor3");
+
+        Barcos patrullero1 = new Barcos(1, "patrullero1");
+        Barcos patrullero2 = new Barcos(1, "patrullero2");
+        Barcos patrullero3 = new Barcos(1, "patrullero3");
+        Barcos patrullero4 = new Barcos(1, "patrullero4");
 
         public Form1()
         {
             InitializeComponent();
-            table_tablero.Location = new Point(this.Width/3 - table_tablero.Width/2, this.Height/2 - table_tablero.Height/2);
-            table_tablero.BackColor = Color.FromArgb(116, 185, 255);
-            casillasCorrectas = new List<Control>();
-            casillasMarcadas = new List<Control>();
-            red = Color.FromArgb(252, 92, 101);
-            green = Color.FromArgb(32, 191, 107);
-            blue = Color.FromArgb(116, 185, 255);
-            CrearLabels();
-        }
-      
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-            table_tablero.Location = new Point(this.Width / 3 - table_tablero.Width / 2, this.Height / 2 - table_tablero.Height / 2);
-        }
 
-        private void CrearLabels()
+            table_tablero.BackColor = blue;
+
+            CrearPicBoxs();
+        }
+    //Crea todos los picture box en el table_tablero y sus eventos Drag & Drop
+        private void CrearPicBoxs()
         {
 
             int totalCols = table_tablero.ColumnCount;
@@ -53,136 +63,98 @@ namespace BattelShip
                     pic_Box.Dock = DockStyle.Fill;
                     pic_Box.AllowDrop = true;
 
+                //Creamos para los pic_Box el evento DragEnter
                     void pic_Box_DragEnter(object sender, DragEventArgs e)
                     {
-
+                    // Si la casilla esta ocupada no pasa nada
                         if (estaMarcada(pic_Box)) return;
-
+                    // Si no, llama al metodo posicion barco
                         posicionBarco(pic_Box);
-
+                    // Habilita la mecanica de Drag & Drop
                         e.Effect = DragDropEffects.Copy;
-
                     }
 
+                    //Creamos para los pic_Box el evento DragLeave
                     void pic_Box_DragLeave(object sender, EventArgs e)
                     {
-
+                    // Si la casilla esta ocupada no pasa nada
                         if (estaMarcada(pic_Box)) return;
-
-                        pic_Box.BackColor = blue;
+                    // Si la casilla es roja vuelve a azul
+                        if(pic_Box.BackColor == red)
+                        {
+                            pic_Box.BackColor = blue;
+                            return;
+                        }
+                    // Si no, pintamos todas las casillas de azul...
                         foreach (Control con in casillasCorrectas)
                         {
-
                             con.BackColor = blue;
-
                         } 
-
+                    // ... y volvemos a pintar las ocupadas de verde  
                         foreach(Control con in casillasMarcadas){
                             con.BackColor = green;
                         }
-
                     }
 
+                    // Creamos para los pic_Box el evento DragDrop
                     void pic_Box_DragDrop(object sender, DragEventArgs e)
                     {
-
-
+                    // Si esta ocupada no pasa nada
                         if (estaMarcada(pic_Box)) return;
-
+                    // Si la posicion es valida guardamos la posicion
                         if (pic_Box.BackColor == green)
                         {
-
                             guardarCasillas(pic_Box);
 
+                        /*  Muestra casillas marcadas al hacer drop valido
                             foreach(Control c in casillasMarcadas)
                             {
-
                                 Console.WriteLine(c.Name.ToString());
-
                             }
-
+                        */
                             return;
-
                         }
-
-                        pic_Box.BackColor = Color.FromArgb(116, 185, 255);
-
-                        //Console.WriteLine(pic_Box.Name);
-
+                    // Si la casilla es roja y haces drop, vuelve a azul
+                        pic_Box.BackColor = blue;
                     }
-
+                // Anyadimos los eventos a cada uno de los pic_Box
                     pic_Box.DragEnter += new DragEventHandler(pic_Box_DragEnter);
                     pic_Box.DragLeave += new EventHandler(pic_Box_DragLeave);
                     pic_Box.DragDrop += new DragEventHandler(pic_Box_DragDrop);
 
                     pic_Box.Name = i + "" + u;
-                    //anyadir al list
-                    int coordenadas = Int32.Parse(pic_Box.Name);
-
-
-                    pic_Box.BackgroundImageLayout = ImageLayout.Stretch;
-
-                    //picBox.Text = u + "" + i;
                     table_tablero.Controls.Add(pic_Box, i, u);
-
-                    //Console.WriteLine(pic_Box.Name);
-
                 }    
             }
         }
 
-
-
-
-
-        private void pic_Carrier_MouseDown(object sender, MouseEventArgs e)
+    // Pinta el pic_Box dependiendo de la posicion
+        private void posicionBarco(PictureBox pic)
         {
-            DoDragDrop(pic_Carrier.BackgroundImage, DragDropEffects.Copy);
-        }
-
-        private void butSiguiente_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private bool posicionBarco(PictureBox pic)
-        {
-
+        // Guardamos la posicion en la tabla en una variable
             TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
-            //Console.WriteLine(pic.Name);
-            //Console.WriteLine(posicionCelda);
-
-            if(posicionCelda.Column > 6)
+        // Si el eje x esta activado y no hay suficiente espacio hacia la derecha pintamos de rojo
+        // Si el eje y esta activado y no hay suficiente espacio hacia abajo pintamos de rojo
+           if((eje && posicionCelda.Column > 6) || (!eje && posicionCelda.Row > 6))
             {
-
-                pic.BackColor = Color.FromArgb(252, 92, 101);
-                return false;
-
+                pic.BackColor = red;
+                return;
             }
-            else if (tieneCasillasMarcadasAlLado(pic))
+        // Comprobamos si hay barcos cerca, si los hay pintamos de rojo
+           else if (tieneCasillasMarcadasAlLado(pic))
             {
-
-                pic.BackColor = Color.FromArgb(252, 92, 101);
-                return false;
-
+                pic.BackColor = red;
+                return;
             }
-            else
+            for (int i = 0; i < 4; i++)
             {
-
-                for(int i = 0; i < 4; i++){
-
-                    Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
-                    c.BackColor = Color.FromArgb(32, 191, 107);
-                    casillasCorrectas.Add(c);
-                    //Console.WriteLine(posicionCelda.Column.ToString(), posicionCelda.Row.ToString());
-                    posicionCelda.Column++;   
-
-                }               
-
+                Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
+                c.BackColor = Color.FromArgb(32, 191, 107);
+                casillasCorrectas.Add(c);
+                //Console.WriteLine(posicionCelda.Column.ToString(), posicionCelda.Row.ToString());
+                if (eje) posicionCelda.Column++;
+                else posicionCelda.Row++;
             }
-
-            return true;
-            
         }
 
         private bool estaMarcada(PictureBox pic)
@@ -198,15 +170,30 @@ namespace BattelShip
         {
 
             TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
-
-            for (int i = 0; i < 4; i++)
+            if (eje)
             {
+                for (int i = 0; i < 4; i++)
+                {
 
-                Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
-                casillasMarcadas.Add(c);
-                posicionCelda.Column++;
+                    Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
+                    casillasMarcadas.Add(c);
+                    posicionCelda.Column++;
+
+                }
+            }
+            else
+            {
+                for (int i = 0; i < 4; i++)
+                {
+
+                    Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
+                    casillasMarcadas.Add(c);
+                    posicionCelda.Row++;
+
+                }
 
             }
+
 
         }
 
@@ -215,19 +202,75 @@ namespace BattelShip
             
             TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
 
-            for (int i = 0; i < 4; i++)
+            if (eje)
             {
+                for (int i = 0; i < 4; i++)
+                {
 
-                Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
-                if (casillasMarcadas.IndexOf(c) != -1) return true;
-                posicionCelda.Column++;
+                    Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
+                    if (casillasMarcadas.IndexOf(c) != -1) return true;
+                    posicionCelda.Column++;
 
+                }
+
+                return false;
             }
+            else //Eje y
+            {
+                for (int i = 0; i < 4; i++)
+                {
 
-            return false;
+                    Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
+                    if (casillasMarcadas.IndexOf(c) != -1) return true;
+                    posicionCelda.Row++;
+
+                }
+
+                return false;
+            }
 
         }
 
+        private void butRotar_Click(object sender, EventArgs e)
+        {
+            if (eje)
+            {
+                eje = false;
+                butRotar.Text = "Eje Y";
+            }else
+            {
+                eje = true;
+                butRotar.Text = "Eje X";
+
+            }
+
+        }
+        private void pic_Carrier_MouseDown(object sender, MouseEventArgs e)
+        {
+            DoDragDrop(pic_Carrier.BackgroundImage, DragDropEffects.Copy);
+        }
+
+        private void pic_Submarine_MouseDown(object sender, MouseEventArgs e)
+        {
+            DoDragDrop(pic_Submarine.BackgroundImage, DragDropEffects.Copy);
+
+        }
+
+        private void pic_Destroyer_MouseDown(object sender, MouseEventArgs e)
+        {
+            DoDragDrop(pic_Destroyer.BackgroundImage, DragDropEffects.Copy);
+
+        }
+
+        private void pic_Patrol_MouseDown(object sender, MouseEventArgs e)
+        {
+            DoDragDrop(pic_Patrol.BackgroundImage, DragDropEffects.Copy);
+
+        }
+        private void butSiguiente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

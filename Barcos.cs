@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace BattelShip
 {
@@ -10,14 +12,13 @@ namespace BattelShip
     {
 
         int length;
-        int cantidad;
         string nombre;
+        List<TableLayoutPanelCellPosition> posicionCelda = new List<TableLayoutPanelCellPosition>();
 
-        public Barcos(int t, int p, string n)
+        public Barcos(int len, string nom)
         {
-            this.length = t;
-            this.cantidad = p;
-            this.nombre = n;
+            this.length = len;
+            this.nombre = nom;
         }
 
         public int getLength()
@@ -25,19 +26,18 @@ namespace BattelShip
             return this.length;
         }
 
-        public int getCantidad()
-        {
-            return this.cantidad;
-        }
-
-        public void setCantidad(int cantidad)
-        {
-            this.cantidad = cantidad;
-        }
-
         public String getNombre()
         {
             return this.nombre;
+        }
+
+        public List<TableLayoutPanelCellPosition> getPosicionCelda()
+        {
+            return this.posicionCelda;
+        }
+        public void setPosicionCelda(List<TableLayoutPanelCellPosition> posicion)
+        {
+            this.posicionCelda = posicion;
         }
 
     }
