@@ -15,12 +15,19 @@ namespace BattelShip
 
         List<string> nombresCasillas;
 
+        List<Control> casillasCorrectas;
+        List<Control> casillasMarcadas;
+ 
+
+
         public Form1()
         {
             InitializeComponent();
             table_tablero.Location = new Point(this.Width/3 - table_tablero.Width/2, this.Height/2 - table_tablero.Height/2);
             table_tablero.BackColor = Color.FromArgb(116, 185, 255);
             nombresCasillas = new List<string>();
+            casillasCorrectas = new List<Control>();
+            casillasMarcadas = new List<Control>();
             CrearLabels();
         }
       
@@ -44,6 +51,8 @@ namespace BattelShip
 
                     void pic_Box_DragEnter(object sender, DragEventArgs e)
                     {
+                        if (pic_Box.BackColor == Color.FromArgb(32, 191, 107))  return;
+
                         //metodo comprobar casilla
                         posicionBarco(pic_Box);
 
@@ -53,13 +62,30 @@ namespace BattelShip
 
                     void pic_Box_DragLeave(object sender, EventArgs e)
                     {
-                        pic_Box.BackColor = Color.FromArgb(116, 185, 255);
+                        if (pic_Box.BackColor == Color.FromArgb(32, 191, 107)) return;
+
+                        pic_Box.BackColor = Color.FromArgb(116, 185, 255);  //Azul
+
+                        foreach(Control c in casillasMarcadas)
+                        {
+                            c.BackColor = Color.FromArgb(116, 185, 255);    //Azul
+                        }
+
                     }
 
                     void pic_Box_DragDrop(object sender, DragEventArgs e)
                     {
                         //pic_Box.BackgroundImage = (Image)e.Data.GetData(DataFormats.Bitmap);
-                        pic_Box.BackColor = Color.FromArgb(116, 185, 255);
+                        
+                        if (pic_Box.BackColor == Color.FromArgb(252, 92, 101))
+                        {
+                            pic_Box.BackColor = Color.FromArgb(116, 185, 255);
+                        }
+                        else
+                        {
+                            casillasMarcadas.RemoveRange(0,casillasMarcadas.Count);
+                        }
+
                         Console.WriteLine(pic_Box.Name);
                         nombresCasillas.Add(pic_Box.Name);
                     }
@@ -86,10 +112,6 @@ namespace BattelShip
 
         }
 
-        private bool comprobarCasilla(String casilla)
-        {
-            return false;
-        }
 
         private void pic_Carrier_MouseDown(object sender, MouseEventArgs e)
         {
@@ -109,18 +131,21 @@ namespace BattelShip
 
             if(posicionCelda.Column > 6)
             {
-                pic.BackColor = Color.FromArgb(252, 92, 101);
+                pic.BackColor = Color.FromArgb(252, 92, 101);   //Rojo
             }
             else
             {
-                pic.BackColor = Color.FromArgb(32, 191, 107);
+                //pic.BackColor = Color.FromArgb(32, 191, 107);   //Verde
 
-                for (int i = 1; i < 4; i++)
+                for (int i = 0; i < 4; i++)                     //Verde
                 {
-                    posicionCelda.Column++;
+                    
                     Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
                     c.BackColor = Color.FromArgb(32, 191, 107);
 
+                    casillasMarcadas.Add(c);
+
+                    posicionCelda.Column++;
                 }
 
             }
