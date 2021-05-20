@@ -9,19 +9,36 @@ namespace BattelShip
     class Barcos
     {
 
-        int tam;
-        int posicion;
+        int length;
+        int cantidad;
         string nombre;
 
         public Barcos(int t, int p, string n)
         {
-            this.tam = t;
-            this.posicion = p;
+            this.length = t;
+            this.cantidad = p;
             this.nombre = n;
-
         }
 
+        public int getLength()
+        {
+            return this.length;
+        }
 
+        public int getCantidad()
+        {
+            return this.cantidad;
+        }
+
+        public void setCantidad(int cantidad)
+        {
+            this.cantidad = cantidad;
+        }
+
+        public String getNombre()
+        {
+            return this.nombre;
+        }
 
     }
 }
