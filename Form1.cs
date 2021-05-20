@@ -13,7 +13,6 @@ namespace BattelShip
     public partial class Form1 : Form
     {
 
-        List<string> nombresCasillas;
         List<Control> casillasCorrectas;
         List<Control> casillasMarcadas;
         Color red;
@@ -25,7 +24,6 @@ namespace BattelShip
             InitializeComponent();
             table_tablero.Location = new Point(this.Width/3 - table_tablero.Width/2, this.Height/2 - table_tablero.Height/2);
             table_tablero.BackColor = Color.FromArgb(116, 185, 255);
-            nombresCasillas = new List<string>();
             casillasCorrectas = new List<Control>();
             casillasMarcadas = new List<Control>();
             red = Color.FromArgb(252, 92, 101);
@@ -88,13 +86,20 @@ namespace BattelShip
                     void pic_Box_DragDrop(object sender, DragEventArgs e)
                     {
 
+
                         if (estaMarcada(pic_Box)) return;
 
                         if (pic_Box.BackColor == green)
                         {
 
-
                             guardarCasillas(pic_Box);
+
+                            foreach(Control c in casillasMarcadas)
+                            {
+
+                                Console.WriteLine(c.Name.ToString());
+
+                            }
 
                             return;
 
@@ -103,7 +108,6 @@ namespace BattelShip
                         pic_Box.BackColor = Color.FromArgb(116, 185, 255);
 
                         //Console.WriteLine(pic_Box.Name);
-                        //nombresCasillas.Add(pic_Box.Name);
 
                     }
 
@@ -152,6 +156,14 @@ namespace BattelShip
             {
 
                 pic.BackColor = Color.FromArgb(252, 92, 101);
+                return false;
+
+            }
+            else if (tieneCasillasMarcadasAlLado(pic))
+            {
+
+                pic.BackColor = Color.FromArgb(252, 92, 101);
+                return false;
 
             }
             else
@@ -197,6 +209,25 @@ namespace BattelShip
             }
 
         }
+
+        private bool tieneCasillasMarcadasAlLado(PictureBox pic)
+        {
+            
+            TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
+
+            for (int i = 0; i < 4; i++)
+            {
+
+                Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
+                if (casillasMarcadas.IndexOf(c) != -1) return true;
+                posicionCelda.Column++;
+
+            }
+
+            return false;
+
+        }
+
     }
 
 }
