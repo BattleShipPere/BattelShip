@@ -35,12 +35,12 @@ namespace BattelShip
             this.pic_Patrol = new System.Windows.Forms.PictureBox();
             this.pic_Destroyer = new System.Windows.Forms.PictureBox();
             this.pic_Carrier = new System.Windows.Forms.PictureBox();
-            this.butSiguiente = new System.Windows.Forms.Button();
             this.Button_Rotar = new System.Windows.Forms.Button();
             this.labPortaviones = new System.Windows.Forms.Label();
             this.labSubmarino = new System.Windows.Forms.Label();
             this.labDestructor = new System.Windows.Forms.Label();
             this.labPatrullero = new System.Windows.Forms.Label();
+            this.butContinue = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Submarine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Patrol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Destroyer)).BeginInit();
@@ -121,6 +121,7 @@ namespace BattelShip
             // 
             // pic_Carrier
             // 
+            this.pic_Carrier.BackColor = System.Drawing.Color.Transparent;
             this.pic_Carrier.BackgroundImage = global::BattelShip.Properties.Resources.carrier;
             this.pic_Carrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_Carrier.Location = new System.Drawing.Point(750, 56);
@@ -130,17 +131,6 @@ namespace BattelShip
             this.pic_Carrier.TabIndex = 1;
             this.pic_Carrier.TabStop = false;
             this.pic_Carrier.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Carrier_MouseDown);
-            // 
-            // butSiguiente
-            // 
-            this.butSiguiente.Enabled = false;
-            this.butSiguiente.Location = new System.Drawing.Point(878, 752);
-            this.butSiguiente.Name = "butSiguiente";
-            this.butSiguiente.Size = new System.Drawing.Size(214, 78);
-            this.butSiguiente.TabIndex = 5;
-            this.butSiguiente.Text = "Continuar";
-            this.butSiguiente.UseVisualStyleBackColor = true;
-            this.butSiguiente.Click += new System.EventHandler(this.butSiguiente_Click);
             // 
             // Button_Rotar
             // 
@@ -205,17 +195,38 @@ namespace BattelShip
             this.labPatrullero.TabIndex = 11;
             this.labPatrullero.Text = "x 4";
             // 
+            // butContinue
+            // 
+            this.butContinue.BackColor = System.Drawing.Color.Transparent;
+            this.butContinue.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Continue;
+            this.butContinue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butContinue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butContinue.Enabled = false;
+            this.butContinue.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.butContinue.FlatAppearance.BorderSize = 0;
+            this.butContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butContinue.Location = new System.Drawing.Point(827, 730);
+            this.butContinue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butContinue.Name = "butContinue";
+            this.butContinue.Size = new System.Drawing.Size(311, 144);
+            this.butContinue.TabIndex = 12;
+            this.butContinue.UseVisualStyleBackColor = false;
+            this.butContinue.MouseLeave += new System.EventHandler(this.butContinue_MouseLeave);
+            this.butContinue.MouseHover += new System.EventHandler(this.butContinue_MouseHover);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 903);
+            this.Controls.Add(this.butContinue);
             this.Controls.Add(this.labPatrullero);
             this.Controls.Add(this.labDestructor);
             this.Controls.Add(this.labSubmarino);
             this.Controls.Add(this.labPortaviones);
             this.Controls.Add(this.Button_Rotar);
-            this.Controls.Add(this.butSiguiente);
             this.Controls.Add(this.pic_Submarine);
             this.Controls.Add(this.pic_Patrol);
             this.Controls.Add(this.pic_Destroyer);
@@ -245,12 +256,12 @@ namespace BattelShip
         private System.Windows.Forms.PictureBox pic_Destroyer;
         private System.Windows.Forms.PictureBox pic_Patrol;
         private System.Windows.Forms.PictureBox pic_Submarine;
-        private System.Windows.Forms.Button butSiguiente;
         private System.Windows.Forms.Button Button_Rotar;
         private System.Windows.Forms.Label labPortaviones;
         private System.Windows.Forms.Label labSubmarino;
         private System.Windows.Forms.Label labDestructor;
         private System.Windows.Forms.Label labPatrullero;
+        private System.Windows.Forms.Button butContinue;
     }
 }
 

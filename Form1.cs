@@ -120,7 +120,7 @@ namespace BattelShip
                                 barcoSeleccionado.getPosicionCelda().Add(casillasMarcadas[k].Name);
                             }
                             barcosColocados.Add(barcoSeleccionado);
-                            if (barcosColocados.Count == 10) butSiguiente.Enabled = true;
+                            if (barcosColocados.Count == 10) butContinue.Enabled = true;
                             // Muestra casillas marcadas al hacer drop valido
                                 /* foreach(String c in barcoSeleccionado.getPosicionCelda())
                                 {
@@ -266,10 +266,6 @@ namespace BattelShip
             }
             DoDragDrop(pic_Patrol.BackgroundImage, DragDropEffects.Copy);
         }
-        private void butSiguiente_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Button_Rotar_Click(object sender, EventArgs e)
         {
@@ -317,6 +313,16 @@ namespace BattelShip
                 if (countPatr == 0) labPatrullero.ForeColor = red;
             }
             
+        }
+
+        private void butContinue_MouseHover(object sender, EventArgs e)
+        {
+            butContinue.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Continue_Selec;
+        }
+
+        private void butContinue_MouseLeave(object sender, EventArgs e)
+        {
+            butContinue.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Continue;
         }
     }
 
