@@ -66,8 +66,7 @@ namespace BattelShip
             this.table_tablero.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.table_tablero.Location = new System.Drawing.Point(52, 181);
-            this.table_tablero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.table_tablero.Location = new System.Drawing.Point(26, 126);
             this.table_tablero.Name = "table_tablero";
             this.table_tablero.RowCount = 10;
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -80,17 +79,16 @@ namespace BattelShip
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.table_tablero.Size = new System.Drawing.Size(733, 664);
+            this.table_tablero.Size = new System.Drawing.Size(489, 421);
             this.table_tablero.TabIndex = 0;
             // 
             // pic_Submarine
             // 
             this.pic_Submarine.BackgroundImage = global::BattelShip.Properties.Resources.submarine;
             this.pic_Submarine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Submarine.Location = new System.Drawing.Point(825, 194);
-            this.pic_Submarine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pic_Submarine.Location = new System.Drawing.Point(550, 126);
             this.pic_Submarine.Name = "pic_Submarine";
-            this.pic_Submarine.Size = new System.Drawing.Size(225, 77);
+            this.pic_Submarine.Size = new System.Drawing.Size(150, 50);
             this.pic_Submarine.TabIndex = 4;
             this.pic_Submarine.TabStop = false;
             this.pic_Submarine.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Submarine_MouseDown);
@@ -99,10 +97,9 @@ namespace BattelShip
             // 
             this.pic_Patrol.BackgroundImage = global::BattelShip.Properties.Resources.patrol;
             this.pic_Patrol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Patrol.Location = new System.Drawing.Point(961, 478);
-            this.pic_Patrol.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pic_Patrol.Location = new System.Drawing.Point(641, 311);
             this.pic_Patrol.Name = "pic_Patrol";
-            this.pic_Patrol.Size = new System.Drawing.Size(89, 66);
+            this.pic_Patrol.Size = new System.Drawing.Size(59, 43);
             this.pic_Patrol.TabIndex = 3;
             this.pic_Patrol.TabStop = false;
             this.pic_Patrol.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Patrol_MouseDown);
@@ -111,10 +108,9 @@ namespace BattelShip
             // 
             this.pic_Destroyer.BackgroundImage = global::BattelShip.Properties.Resources.destroyer;
             this.pic_Destroyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Destroyer.Location = new System.Drawing.Point(900, 331);
-            this.pic_Destroyer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pic_Destroyer.Location = new System.Drawing.Point(600, 215);
             this.pic_Destroyer.Name = "pic_Destroyer";
-            this.pic_Destroyer.Size = new System.Drawing.Size(150, 77);
+            this.pic_Destroyer.Size = new System.Drawing.Size(100, 50);
             this.pic_Destroyer.TabIndex = 2;
             this.pic_Destroyer.TabStop = false;
             this.pic_Destroyer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Destroyer_MouseDown);
@@ -124,10 +120,9 @@ namespace BattelShip
             this.pic_Carrier.BackColor = System.Drawing.Color.Transparent;
             this.pic_Carrier.BackgroundImage = global::BattelShip.Properties.Resources.carrier;
             this.pic_Carrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Carrier.Location = new System.Drawing.Point(750, 56);
-            this.pic_Carrier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pic_Carrier.Location = new System.Drawing.Point(500, 36);
             this.pic_Carrier.Name = "pic_Carrier";
-            this.pic_Carrier.Size = new System.Drawing.Size(300, 77);
+            this.pic_Carrier.Size = new System.Drawing.Size(200, 50);
             this.pic_Carrier.TabIndex = 1;
             this.pic_Carrier.TabStop = false;
             this.pic_Carrier.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Carrier_MouseDown);
@@ -143,10 +138,9 @@ namespace BattelShip
             this.Button_Rotar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.Button_Rotar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Button_Rotar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Rotar.Location = new System.Drawing.Point(297, 14);
-            this.Button_Rotar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Button_Rotar.Location = new System.Drawing.Point(145, 12);
             this.Button_Rotar.Name = "Button_Rotar";
-            this.Button_Rotar.Size = new System.Drawing.Size(311, 144);
+            this.Button_Rotar.Size = new System.Drawing.Size(207, 94);
             this.Button_Rotar.TabIndex = 7;
             this.Button_Rotar.UseVisualStyleBackColor = false;
             this.Button_Rotar.Click += new System.EventHandler(this.Button_Rotar_Click);
@@ -156,9 +150,10 @@ namespace BattelShip
             this.labPortaviones.AutoSize = true;
             this.labPortaviones.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labPortaviones.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labPortaviones.Location = new System.Drawing.Point(1084, 79);
+            this.labPortaviones.Location = new System.Drawing.Point(723, 51);
+            this.labPortaviones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labPortaviones.Name = "labPortaviones";
-            this.labPortaviones.Size = new System.Drawing.Size(52, 38);
+            this.labPortaviones.Size = new System.Drawing.Size(38, 27);
             this.labPortaviones.TabIndex = 8;
             this.labPortaviones.Text = "x 1";
             // 
@@ -167,9 +162,10 @@ namespace BattelShip
             this.labSubmarino.AutoSize = true;
             this.labSubmarino.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labSubmarino.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labSubmarino.Location = new System.Drawing.Point(1083, 214);
+            this.labSubmarino.Location = new System.Drawing.Point(722, 139);
+            this.labSubmarino.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labSubmarino.Name = "labSubmarino";
-            this.labSubmarino.Size = new System.Drawing.Size(53, 38);
+            this.labSubmarino.Size = new System.Drawing.Size(38, 27);
             this.labSubmarino.TabIndex = 9;
             this.labSubmarino.Text = "x 2";
             // 
@@ -178,9 +174,10 @@ namespace BattelShip
             this.labDestructor.AutoSize = true;
             this.labDestructor.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDestructor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labDestructor.Location = new System.Drawing.Point(1085, 352);
+            this.labDestructor.Location = new System.Drawing.Point(723, 229);
+            this.labDestructor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labDestructor.Name = "labDestructor";
-            this.labDestructor.Size = new System.Drawing.Size(52, 38);
+            this.labDestructor.Size = new System.Drawing.Size(38, 27);
             this.labDestructor.TabIndex = 10;
             this.labDestructor.Text = "x 3";
             // 
@@ -189,9 +186,10 @@ namespace BattelShip
             this.labPatrullero.AutoSize = true;
             this.labPatrullero.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labPatrullero.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labPatrullero.Location = new System.Drawing.Point(1085, 492);
+            this.labPatrullero.Location = new System.Drawing.Point(723, 320);
+            this.labPatrullero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labPatrullero.Name = "labPatrullero";
-            this.labPatrullero.Size = new System.Drawing.Size(53, 38);
+            this.labPatrullero.Size = new System.Drawing.Size(38, 27);
             this.labPatrullero.TabIndex = 11;
             this.labPatrullero.Text = "x 4";
             // 
@@ -207,10 +205,9 @@ namespace BattelShip
             this.butContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.butContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.butContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butContinue.Location = new System.Drawing.Point(827, 730);
-            this.butContinue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butContinue.Location = new System.Drawing.Point(550, 465);
             this.butContinue.Name = "butContinue";
-            this.butContinue.Size = new System.Drawing.Size(311, 144);
+            this.butContinue.Size = new System.Drawing.Size(207, 82);
             this.butContinue.TabIndex = 12;
             this.butContinue.UseVisualStyleBackColor = false;
             this.butContinue.MouseLeave += new System.EventHandler(this.butContinue_MouseLeave);
@@ -218,9 +215,9 @@ namespace BattelShip
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 903);
+            this.ClientSize = new System.Drawing.Size(782, 570);
             this.Controls.Add(this.butContinue);
             this.Controls.Add(this.labPatrullero);
             this.Controls.Add(this.labDestructor);
@@ -235,8 +232,9 @@ namespace BattelShip
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1186, 668);
+            this.MinimumSize = new System.Drawing.Size(796, 448);
             this.Name = "Form1";
             this.Text = "Coloca los barcos";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
