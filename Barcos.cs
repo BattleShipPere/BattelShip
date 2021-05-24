@@ -10,10 +10,9 @@ namespace BattelShip
 {
     class Barcos
     {
-
         int length;
         string nombre;
-        List<TableLayoutPanelCellPosition> posicionCelda = new List<TableLayoutPanelCellPosition>();
+        List<String> posicionCelda = new List<String>();
 
         public Barcos(int len, string nom)
         {
@@ -31,11 +30,11 @@ namespace BattelShip
             return this.nombre;
         }
 
-        public List<TableLayoutPanelCellPosition> getPosicionCelda()
+        public List<String> getPosicionCelda()
         {
             return this.posicionCelda;
         }
-        public void setPosicionCelda(List<TableLayoutPanelCellPosition> posicion)
+        public void setPosicionCelda(List<String> posicion)
         {
             this.posicionCelda = posicion;
         }

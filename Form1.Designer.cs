@@ -82,7 +82,7 @@ namespace BattelShip
             // 
             this.pic_Submarine.BackgroundImage = global::BattelShip.Properties.Resources.submarine;
             this.pic_Submarine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Submarine.Location = new System.Drawing.Point(622, 144);
+            this.pic_Submarine.Location = new System.Drawing.Point(622, 133);
             this.pic_Submarine.Name = "pic_Submarine";
             this.pic_Submarine.Size = new System.Drawing.Size(150, 50);
             this.pic_Submarine.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace BattelShip
             // 
             this.pic_Patrol.BackgroundImage = global::BattelShip.Properties.Resources.patrol;
             this.pic_Patrol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Patrol.Location = new System.Drawing.Point(722, 263);
+            this.pic_Patrol.Location = new System.Drawing.Point(722, 294);
             this.pic_Patrol.Name = "pic_Patrol";
             this.pic_Patrol.Size = new System.Drawing.Size(50, 50);
             this.pic_Patrol.TabIndex = 3;
@@ -104,7 +104,7 @@ namespace BattelShip
             // 
             this.pic_Destroyer.BackgroundImage = global::BattelShip.Properties.Resources.destroyer;
             this.pic_Destroyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Destroyer.Location = new System.Drawing.Point(672, 200);
+            this.pic_Destroyer.Location = new System.Drawing.Point(672, 215);
             this.pic_Destroyer.Name = "pic_Destroyer";
             this.pic_Destroyer.Size = new System.Drawing.Size(100, 50);
             this.pic_Destroyer.TabIndex = 2;
@@ -115,7 +115,7 @@ namespace BattelShip
             // 
             this.pic_Carrier.BackgroundImage = global::BattelShip.Properties.Resources.carrier;
             this.pic_Carrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Carrier.Location = new System.Drawing.Point(572, 88);
+            this.pic_Carrier.Location = new System.Drawing.Point(578, 54);
             this.pic_Carrier.Name = "pic_Carrier";
             this.pic_Carrier.Size = new System.Drawing.Size(200, 50);
             this.pic_Carrier.TabIndex = 1;

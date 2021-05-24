@@ -12,18 +12,20 @@ namespace BattelShip
 {
     public partial class Form1 : Form
     {
+    // Variables row and column
+        int totalCols;
+        int totalRows;
+    // List<>
         List<Control> casillasCorrectas = new List<Control>();  // Ubicaciones no guardadas
         List<Control> casillasMarcadas = new List<Control>();  // Ubicaciones de Barcos.
-
+        List<Barcos> barcosColocados = new List<Barcos>();
     // True == Eje X ; False == Eje Y
         bool eje = true; 
-
-    //Colores
+    // Colores
         Color red = Color.FromArgb(252, 92, 101);
         Color green = Color.FromArgb(32, 191, 107);
         Color blue = Color.FromArgb(116, 185, 255);
-
-    //Barcos sin posicion
+    // Barcos sin posicion
         Barcos portaviones = new Barcos(4, "portaviones");
 
         Barcos submarino1 = new Barcos(3, "submarino1");
@@ -38,20 +40,24 @@ namespace BattelShip
         Barcos patrullero3 = new Barcos(1, "patrullero3");
         Barcos patrullero4 = new Barcos(1, "patrullero4");
 
+        Barcos barcoSeleccionado;
+    // Constructor form1
         public Form1()
         {
             InitializeComponent();
 
             table_tablero.BackColor = blue;
 
+            // barcoSeleccionado = destructor1;
+
+            totalCols = table_tablero.ColumnCount;
+            totalRows = table_tablero.RowCount;
+
             CrearPicBoxs();
         }
     //Crea todos los picture box en el table_tablero y sus eventos Drag & Drop
         private void CrearPicBoxs()
         {
-
-            int totalCols = table_tablero.ColumnCount;
-            int totalRows = table_tablero.RowCount;
 
             for (int i = 0; i < totalCols; i++)
             {
@@ -95,7 +101,6 @@ namespace BattelShip
                             con.BackColor = green;
                         }
                     }
-
                     // Creamos para los pic_Box el evento DragDrop
                     void pic_Box_DragDrop(object sender, DragEventArgs e)
                     {
@@ -105,13 +110,17 @@ namespace BattelShip
                         if (pic_Box.BackColor == green)
                         {
                             guardarCasillas(pic_Box);
-
-                        /*  Muestra casillas marcadas al hacer drop valido
-                            foreach(Control c in casillasMarcadas)
+                            for(int k = casillasMarcadas.Count - 1; k > casillasMarcadas.Count - barcoSeleccionado.getLength() - 1; k--)
                             {
-                                Console.WriteLine(c.Name.ToString());
+                                barcoSeleccionado.getPosicionCelda().Add(casillasMarcadas[k].Name);
                             }
-                        */
+                            barcosColocados.Add(barcoSeleccionado);
+                            if (barcosColocados.Count == 10) butSiguiente.Enabled = true;
+                            // Muestra casillas marcadas al hacer drop valido
+                                /* foreach(String c in barcoSeleccionado.getPosicionCelda())
+                                {
+                                    Console.WriteLine(c);
+                                } */
                             return;
                         }
                     // Si la casilla es roja y haces drop, vuelve a azul
@@ -127,15 +136,16 @@ namespace BattelShip
                 }    
             }
         }
-
     // Pinta el pic_Box dependiendo de la posicion
         private void posicionBarco(PictureBox pic)
         {
         // Guardamos la posicion en la tabla en una variable
             TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
+            // Variable para controlar
+            int distancia = totalCols - barcoSeleccionado.getLength();
         // Si el eje x esta activado y no hay suficiente espacio hacia la derecha pintamos de rojo
         // Si el eje y esta activado y no hay suficiente espacio hacia abajo pintamos de rojo
-           if((eje && posicionCelda.Column > 6) || (!eje && posicionCelda.Row > 6))
+           if((eje && posicionCelda.Column > distancia) || (!eje && posicionCelda.Row > distancia))
             {
                 pic.BackColor = red;
                 return;
@@ -147,7 +157,7 @@ namespace BattelShip
                 return;
             }
         // Si no, la posicion es correcta, pintamos de verde y la guardamos en casillas correctas
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < barcoSeleccionado.getLength(); i++)
             {
                 Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
                 c.BackColor = green;
@@ -158,7 +168,6 @@ namespace BattelShip
                 else posicionCelda.Row++;
             }
         }
-
     // Comprueba si la casilla esta ya ocupada
         private bool estaMarcada(PictureBox pic)
         {
@@ -172,7 +181,7 @@ namespace BattelShip
         {
             TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
            
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < barcoSeleccionado.getLength(); i++)
             {
                 Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
                 casillasMarcadas.Add(c);
@@ -182,12 +191,12 @@ namespace BattelShip
                 else posicionCelda.Row++;
             }
         }
-
+    // Método tieneCasisllasMarcadasAlLado
         private bool tieneCasillasMarcadasAlLado(PictureBox pic)
         {
             TableLayoutPanelCellPosition posicionCelda = table_tablero.GetCellPosition(pic);
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < barcoSeleccionado.getLength(); i++)
             {
                 Control c = table_tablero.GetControlFromPosition(posicionCelda.Column, posicionCelda.Row);
                 if (casillasMarcadas.IndexOf(c) != -1) return true;
@@ -198,7 +207,6 @@ namespace BattelShip
             }
             return false;
         }
-
     // Cambia el eje
         private void butRotar_Click(object sender, EventArgs e)
         {
@@ -213,29 +221,57 @@ namespace BattelShip
                 butRotar.Text = "Eje X";
             }
         }
-
     // Eventos MouseDown de las imagenes de los 4 barcos diferentes
         private void pic_Carrier_MouseDown(object sender, MouseEventArgs e)
         {
+            if (!barcosColocados.Contains(portaviones)) barcoSeleccionado = portaviones;
+            else
+            {
+                pic_Carrier.Enabled = false;
+                return;
+            }
             DoDragDrop(pic_Carrier.BackgroundImage, DragDropEffects.Copy);
         }
 
         private void pic_Submarine_MouseDown(object sender, MouseEventArgs e)
         {
+            if (!barcosColocados.Contains(submarino1)) barcoSeleccionado = submarino1;
+            else if (!barcosColocados.Contains(submarino2)) barcoSeleccionado = submarino2;
+            else
+            {
+                pic_Submarine.Enabled = false;
+                return;
+            }
             DoDragDrop(pic_Submarine.BackgroundImage, DragDropEffects.Copy);
-
         }
 
         private void pic_Destroyer_MouseDown(object sender, MouseEventArgs e)
         {
-            DoDragDrop(pic_Destroyer.BackgroundImage, DragDropEffects.Copy);
 
+            if (!barcosColocados.Contains(destructor1)) barcoSeleccionado = destructor1;
+            else if (!barcosColocados.Contains(destructor2)) barcoSeleccionado = destructor2;
+            else if (!barcosColocados.Contains(destructor3)) barcoSeleccionado = destructor3;
+            else
+            {
+                pic_Destroyer.Enabled = false;
+                return;
+            }
+            DoDragDrop(pic_Destroyer.BackgroundImage, DragDropEffects.Copy);
         }
 
         private void pic_Patrol_MouseDown(object sender, MouseEventArgs e)
         {
-            DoDragDrop(pic_Patrol.BackgroundImage, DragDropEffects.Copy);
 
+            if (!barcosColocados.Contains(patrullero1)) barcoSeleccionado = patrullero1;
+            else if (!barcosColocados.Contains(patrullero2)) barcoSeleccionado = patrullero2;
+            else if (!barcosColocados.Contains(patrullero3)) barcoSeleccionado = patrullero3;
+            else if (!barcosColocados.Contains(patrullero4)) barcoSeleccionado = patrullero4;
+            else
+            {
+                pic_Patrol.Enabled = false;
+                return;
+            }
+            DoDragDrop(pic_Patrol.BackgroundImage, DragDropEffects.Copy);
         }
         private void butSiguiente_Click(object sender, EventArgs e)
         {
