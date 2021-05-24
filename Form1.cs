@@ -27,18 +27,22 @@ namespace BattelShip
         Color blue = Color.FromArgb(116, 185, 255);
     // Barcos sin posicion
         Barcos portaviones = new Barcos(4, "portaviones");
+        int countPort = 1;
 
         Barcos submarino1 = new Barcos(3, "submarino1");
         Barcos submarino2 = new Barcos(3, "submarino2");
+        int countSub = 2;
 
         Barcos destructor1 = new Barcos(2, "destructor1");
         Barcos destructor2 = new Barcos(2, "destructor2");
         Barcos destructor3 = new Barcos(2, "destructor3");
+        int countDes = 3;
 
         Barcos patrullero1 = new Barcos(1, "patrullero1");
         Barcos patrullero2 = new Barcos(1, "patrullero2");
         Barcos patrullero3 = new Barcos(1, "patrullero3");
         Barcos patrullero4 = new Barcos(1, "patrullero4");
+        int countPatr = 4;
 
         Barcos barcoSeleccionado;
     // Constructor form1
@@ -110,6 +114,7 @@ namespace BattelShip
                         if (pic_Box.BackColor == green)
                         {
                             guardarCasillas(pic_Box);
+                            actualizarLabels(barcoSeleccionado);
                             for(int k = casillasMarcadas.Count - 1; k > casillasMarcadas.Count - barcoSeleccionado.getLength() - 1; k--)
                             {
                                 barcoSeleccionado.getPosicionCelda().Add(casillasMarcadas[k].Name);
@@ -208,19 +213,7 @@ namespace BattelShip
             return false;
         }
     // Cambia el eje
-        private void butRotar_Click(object sender, EventArgs e)
-        {
-            if (eje)
-            {
-                eje = false;
-                butRotar.Text = "Eje Y";
-            }
-            else
-            {
-                eje = true;
-                butRotar.Text = "Eje X";
-            }
-        }
+      
     // Eventos MouseDown de las imagenes de los 4 barcos diferentes
         private void pic_Carrier_MouseDown(object sender, MouseEventArgs e)
         {
@@ -276,6 +269,54 @@ namespace BattelShip
         private void butSiguiente_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button_Rotar_Click(object sender, EventArgs e)
+        {
+            if (eje)
+            {
+                eje = false;
+                Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_Y;
+            }
+            else
+            {
+                eje = true;
+                Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_X;
+            }
+        }
+
+        private void pic_Submarine_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void actualizarLabels(Barcos b)
+        {
+            if (b == portaviones)
+            {
+                countPort--;
+                labPortaviones.Text = "x " + countPort;
+                labPortaviones.ForeColor = red;
+            }
+            else if (b == submarino1 || b == submarino2)
+            {
+                countSub--;
+                labSubmarino.Text = "x " + countSub;
+                if (countSub == 0) labSubmarino.ForeColor = red;
+            }
+            else if (b == destructor1 || b == destructor2 || b == destructor3)
+            {
+                countDes--;
+                labDestructor.Text = "x " + countDes;
+                if (countDes == 0) labDestructor.ForeColor = red;
+            }
+            else if (b == patrullero4 || b == patrullero3 || b == patrullero2 || b == patrullero1)
+            {
+                countPatr--;
+                labPatrullero.Text = "x " + countPatr;
+                if (countPatr == 0) labPatrullero.ForeColor = red;
+            }
+            
         }
     }
 
