@@ -73,6 +73,16 @@ namespace BattelShip.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boton_Continue_Disabled {
+            get {
+                object obj = ResourceManager.GetObject("Boton_Continue_Disabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton_Continue_Selec {
             get {
                 object obj = ResourceManager.GetObject("Boton_Continue_Selec", resourceCulture);
@@ -183,9 +193,29 @@ namespace BattelShip.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Eje_X_Selec {
+            get {
+                object obj = ResourceManager.GetObject("Eje_X_Selec", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Eje_Y {
             get {
                 object obj = ResourceManager.GetObject("Eje_Y", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eje_Y_Selec {
+            get {
+                object obj = ResourceManager.GetObject("Eje_Y_Selec", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
