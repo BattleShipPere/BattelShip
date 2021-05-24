@@ -123,16 +123,6 @@ namespace BattelShip.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Boton_Reset_Selec {
-            get {
-                object obj = ResourceManager.GetObject("Boton_Reset_Selec", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Boton_Start {
             get {
                 object obj = ResourceManager.GetObject("Boton Start", resourceCulture);
@@ -206,6 +196,16 @@ namespace BattelShip.Properties {
         internal static System.Drawing.Bitmap Eje_Y {
             get {
                 object obj = ResourceManager.GetObject("Eje_Y", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eje_Y_Selec {
+            get {
+                object obj = ResourceManager.GetObject("Eje_Y_Selec", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

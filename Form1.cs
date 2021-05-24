@@ -120,12 +120,17 @@ namespace BattelShip
                                 barcoSeleccionado.getPosicionCelda().Add(casillasMarcadas[k].Name);
                             }
                             barcosColocados.Add(barcoSeleccionado);
-                            if (barcosColocados.Count == 10) butContinue.Enabled = true;
+                            if (barcosColocados.Count == 10)
+                            {
+                                butContinue.Enabled = true;
+                                butContinue.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Continue;
+                            }
+
                             // Muestra casillas marcadas al hacer drop valido
-                                /* foreach(String c in barcoSeleccionado.getPosicionCelda())
-                                {
-                                    Console.WriteLine(c);
-                                } */
+                            /* foreach(String c in barcoSeleccionado.getPosicionCelda())
+                            {
+                                Console.WriteLine(c);
+                            } */
                             return;
                         }
                     // Si la casilla es roja y haces drop, vuelve a azul
@@ -272,12 +277,12 @@ namespace BattelShip
             if (eje)
             {
                 eje = false;
-                Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_Y;
+                Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_Y_Selec;
             }
             else
             {
                 eje = true;
-                Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_X;
+                Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_X_Selec;
             }
         }
 
@@ -323,6 +328,18 @@ namespace BattelShip
         private void butContinue_MouseLeave(object sender, EventArgs e)
         {
             butContinue.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Continue;
+        }
+
+        private void Button_Rotar_MouseHover(object sender, EventArgs e)
+        {
+            if (eje) Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_X_Selec;
+            else Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_Y_Selec;
+        }
+
+        private void Button_Rotar_MouseLeave(object sender, EventArgs e)
+        {
+            if (eje) Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_X;
+            else Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_Y;
         }
     }
 

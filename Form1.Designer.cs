@@ -31,16 +31,16 @@ namespace BattelShip
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.table_tablero = new System.Windows.Forms.TableLayoutPanel();
-            this.pic_Submarine = new System.Windows.Forms.PictureBox();
-            this.pic_Patrol = new System.Windows.Forms.PictureBox();
-            this.pic_Destroyer = new System.Windows.Forms.PictureBox();
-            this.pic_Carrier = new System.Windows.Forms.PictureBox();
-            this.Button_Rotar = new System.Windows.Forms.Button();
             this.labPortaviones = new System.Windows.Forms.Label();
             this.labSubmarino = new System.Windows.Forms.Label();
             this.labDestructor = new System.Windows.Forms.Label();
             this.labPatrullero = new System.Windows.Forms.Label();
             this.butContinue = new System.Windows.Forms.Button();
+            this.Button_Rotar = new System.Windows.Forms.Button();
+            this.pic_Submarine = new System.Windows.Forms.PictureBox();
+            this.pic_Patrol = new System.Windows.Forms.PictureBox();
+            this.pic_Destroyer = new System.Windows.Forms.PictureBox();
+            this.pic_Carrier = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Submarine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Patrol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Destroyer)).BeginInit();
@@ -81,69 +81,6 @@ namespace BattelShip
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.Size = new System.Drawing.Size(489, 421);
             this.table_tablero.TabIndex = 0;
-            // 
-            // pic_Submarine
-            // 
-            this.pic_Submarine.BackgroundImage = global::BattelShip.Properties.Resources.submarine;
-            this.pic_Submarine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Submarine.Location = new System.Drawing.Point(550, 126);
-            this.pic_Submarine.Name = "pic_Submarine";
-            this.pic_Submarine.Size = new System.Drawing.Size(150, 50);
-            this.pic_Submarine.TabIndex = 4;
-            this.pic_Submarine.TabStop = false;
-            this.pic_Submarine.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Submarine_MouseDown);
-            // 
-            // pic_Patrol
-            // 
-            this.pic_Patrol.BackgroundImage = global::BattelShip.Properties.Resources.patrol;
-            this.pic_Patrol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Patrol.Location = new System.Drawing.Point(641, 311);
-            this.pic_Patrol.Name = "pic_Patrol";
-            this.pic_Patrol.Size = new System.Drawing.Size(59, 43);
-            this.pic_Patrol.TabIndex = 3;
-            this.pic_Patrol.TabStop = false;
-            this.pic_Patrol.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Patrol_MouseDown);
-            // 
-            // pic_Destroyer
-            // 
-            this.pic_Destroyer.BackgroundImage = global::BattelShip.Properties.Resources.destroyer;
-            this.pic_Destroyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Destroyer.Location = new System.Drawing.Point(600, 215);
-            this.pic_Destroyer.Name = "pic_Destroyer";
-            this.pic_Destroyer.Size = new System.Drawing.Size(100, 50);
-            this.pic_Destroyer.TabIndex = 2;
-            this.pic_Destroyer.TabStop = false;
-            this.pic_Destroyer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Destroyer_MouseDown);
-            // 
-            // pic_Carrier
-            // 
-            this.pic_Carrier.BackColor = System.Drawing.Color.Transparent;
-            this.pic_Carrier.BackgroundImage = global::BattelShip.Properties.Resources.carrier;
-            this.pic_Carrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_Carrier.Location = new System.Drawing.Point(500, 36);
-            this.pic_Carrier.Name = "pic_Carrier";
-            this.pic_Carrier.Size = new System.Drawing.Size(200, 50);
-            this.pic_Carrier.TabIndex = 1;
-            this.pic_Carrier.TabStop = false;
-            this.pic_Carrier.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Carrier_MouseDown);
-            // 
-            // Button_Rotar
-            // 
-            this.Button_Rotar.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_X;
-            this.Button_Rotar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Button_Rotar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_Rotar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Button_Rotar.FlatAppearance.BorderSize = 0;
-            this.Button_Rotar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.Button_Rotar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.Button_Rotar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Rotar.Location = new System.Drawing.Point(145, 12);
-            this.Button_Rotar.Name = "Button_Rotar";
-            this.Button_Rotar.Size = new System.Drawing.Size(207, 94);
-            this.Button_Rotar.TabIndex = 7;
-            this.Button_Rotar.UseVisualStyleBackColor = false;
-            this.Button_Rotar.Click += new System.EventHandler(this.Button_Rotar_Click);
             // 
             // labPortaviones
             // 
@@ -196,7 +133,7 @@ namespace BattelShip
             // butContinue
             // 
             this.butContinue.BackColor = System.Drawing.Color.Transparent;
-            this.butContinue.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Continue;
+            this.butContinue.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Continue_Disabled;
             this.butContinue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butContinue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.butContinue.Enabled = false;
@@ -212,6 +149,71 @@ namespace BattelShip
             this.butContinue.UseVisualStyleBackColor = false;
             this.butContinue.MouseLeave += new System.EventHandler(this.butContinue_MouseLeave);
             this.butContinue.MouseHover += new System.EventHandler(this.butContinue_MouseHover);
+            // 
+            // Button_Rotar
+            // 
+            this.Button_Rotar.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_X;
+            this.Button_Rotar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Button_Rotar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_Rotar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Button_Rotar.FlatAppearance.BorderSize = 0;
+            this.Button_Rotar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Button_Rotar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Button_Rotar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Rotar.Location = new System.Drawing.Point(145, 12);
+            this.Button_Rotar.Name = "Button_Rotar";
+            this.Button_Rotar.Size = new System.Drawing.Size(207, 94);
+            this.Button_Rotar.TabIndex = 7;
+            this.Button_Rotar.UseVisualStyleBackColor = false;
+            this.Button_Rotar.Click += new System.EventHandler(this.Button_Rotar_Click);
+            this.Button_Rotar.MouseLeave += new System.EventHandler(this.Button_Rotar_MouseLeave);
+            this.Button_Rotar.MouseHover += new System.EventHandler(this.Button_Rotar_MouseHover);
+            // 
+            // pic_Submarine
+            // 
+            this.pic_Submarine.BackgroundImage = global::BattelShip.Properties.Resources.submarine;
+            this.pic_Submarine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_Submarine.Location = new System.Drawing.Point(550, 126);
+            this.pic_Submarine.Name = "pic_Submarine";
+            this.pic_Submarine.Size = new System.Drawing.Size(150, 50);
+            this.pic_Submarine.TabIndex = 4;
+            this.pic_Submarine.TabStop = false;
+            this.pic_Submarine.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Submarine_MouseDown);
+            // 
+            // pic_Patrol
+            // 
+            this.pic_Patrol.BackgroundImage = global::BattelShip.Properties.Resources.patrol;
+            this.pic_Patrol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_Patrol.Location = new System.Drawing.Point(641, 311);
+            this.pic_Patrol.Name = "pic_Patrol";
+            this.pic_Patrol.Size = new System.Drawing.Size(59, 43);
+            this.pic_Patrol.TabIndex = 3;
+            this.pic_Patrol.TabStop = false;
+            this.pic_Patrol.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Patrol_MouseDown);
+            // 
+            // pic_Destroyer
+            // 
+            this.pic_Destroyer.BackgroundImage = global::BattelShip.Properties.Resources.destroyer;
+            this.pic_Destroyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_Destroyer.Location = new System.Drawing.Point(600, 215);
+            this.pic_Destroyer.Name = "pic_Destroyer";
+            this.pic_Destroyer.Size = new System.Drawing.Size(100, 50);
+            this.pic_Destroyer.TabIndex = 2;
+            this.pic_Destroyer.TabStop = false;
+            this.pic_Destroyer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Destroyer_MouseDown);
+            // 
+            // pic_Carrier
+            // 
+            this.pic_Carrier.BackColor = System.Drawing.Color.Transparent;
+            this.pic_Carrier.BackgroundImage = global::BattelShip.Properties.Resources.carrier;
+            this.pic_Carrier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_Carrier.Location = new System.Drawing.Point(500, 36);
+            this.pic_Carrier.Name = "pic_Carrier";
+            this.pic_Carrier.Size = new System.Drawing.Size(200, 50);
+            this.pic_Carrier.TabIndex = 1;
+            this.pic_Carrier.TabStop = false;
+            this.pic_Carrier.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_Carrier_MouseDown);
             // 
             // Form1
             // 
