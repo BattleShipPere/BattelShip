@@ -114,5 +114,23 @@
   <ItemGroup>
     <None Include="img\Boton Exit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Boton_Start_Selec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Boton_Exit_Selec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Boton_Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Boton_Reset_Selec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Eje_X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Eje_Y.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

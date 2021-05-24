@@ -29,5 +29,25 @@ namespace BattelShip
         {
             Close();
         }
+
+        private void Button_Start_MouseHover(object sender, EventArgs e)
+        {      
+            this.Button_Start.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Start_Selec;
+        }
+
+        private void Button_Start_MouseLeave(object sender, EventArgs e)
+        {
+            this.Button_Start.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Start;
+        }
+
+        private void Button_Exit_MouseHover(object sender, EventArgs e)
+        {
+            this.Button_Exit.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Exit_Selec;
+        }
+
+        private void Button_Exit_MouseLeave(object sender, EventArgs e)
+        {
+            this.Button_Exit.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Exit;
+        }
     }
 }

@@ -63,6 +63,8 @@ namespace BattelShip
             this.Button_Start.TabIndex = 1;
             this.Button_Start.UseVisualStyleBackColor = false;
             this.Button_Start.Click += new System.EventHandler(this.Button_Start_Click);
+            this.Button_Start.MouseLeave += new System.EventHandler(this.Button_Start_MouseLeave);
+            this.Button_Start.MouseHover += new System.EventHandler(this.Button_Start_MouseHover);
             // 
             // Button_Exit
             // 
@@ -80,6 +82,8 @@ namespace BattelShip
             this.Button_Exit.TabIndex = 4;
             this.Button_Exit.UseVisualStyleBackColor = false;
             this.Button_Exit.Click += new System.EventHandler(this.Button_Exit_Click);
+            this.Button_Exit.MouseLeave += new System.EventHandler(this.Button_Exit_MouseLeave);
+            this.Button_Exit.MouseHover += new System.EventHandler(this.Button_Exit_MouseHover);
             // 
             // Form2_PantallaInicial
             // 
