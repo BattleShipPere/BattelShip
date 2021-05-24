@@ -141,5 +141,14 @@
   <ItemGroup>
     <None Include="img\ExitBlack.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Boton_Continue_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Eje_X_Selec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Eje_Y_Selec.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

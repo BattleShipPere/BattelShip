@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Boton_Continue_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Boton_Continue_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="destroyer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\destroyer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -127,8 +130,8 @@
   <data name="patrol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\patrol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Img_Tituto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Img_Tituto.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Boton_Continue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Boton_Continue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Eje_Y" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Eje_Y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +142,8 @@
   <data name="Boton_Start_Selec1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Boton_Start_Selec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Boton_Reset_Selec" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Boton_Reset_Selec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Img_Tituto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Img_Tituto.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Boton Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Boton Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
