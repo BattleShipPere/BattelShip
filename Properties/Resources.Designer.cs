@@ -223,6 +223,16 @@ namespace BattelShip.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondoMar {
+            get {
+                object obj = ResourceManager.GetObject("fondoMar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Img_Tituto {
             get {
                 object obj = ResourceManager.GetObject("Img_Tituto", resourceCulture);

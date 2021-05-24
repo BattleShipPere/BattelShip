@@ -150,5 +150,8 @@
   <ItemGroup>
     <None Include="img\Eje_Y_Selec.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\fondoMar.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

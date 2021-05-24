@@ -54,6 +54,7 @@ namespace BattelShip
 
             // barcoSeleccionado = destructor1;
 
+            table_tablero.BackColor = Color.Transparent;
             totalCols = table_tablero.ColumnCount;
             totalRows = table_tablero.RowCount;
 
@@ -70,6 +71,7 @@ namespace BattelShip
                 {
 
                     PictureBox pic_Box = new PictureBox();
+                    pic_Box.BackColor = blue;
                     pic_Box.Dock = DockStyle.Fill;
                     pic_Box.AllowDrop = true;
 

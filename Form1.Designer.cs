@@ -53,7 +53,6 @@ namespace BattelShip
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.table_tablero.BackColor = System.Drawing.Color.Beige;
-            this.table_tablero.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.table_tablero.ColumnCount = 10;
             this.table_tablero.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -66,7 +65,7 @@ namespace BattelShip
             this.table_tablero.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.table_tablero.Location = new System.Drawing.Point(26, 126);
+            this.table_tablero.Location = new System.Drawing.Point(61, 146);
             this.table_tablero.Name = "table_tablero";
             this.table_tablero.RowCount = 10;
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -79,12 +78,13 @@ namespace BattelShip
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.table_tablero.Size = new System.Drawing.Size(489, 421);
+            this.table_tablero.Size = new System.Drawing.Size(473, 401);
             this.table_tablero.TabIndex = 0;
             // 
             // labPortaviones
             // 
             this.labPortaviones.AutoSize = true;
+            this.labPortaviones.BackColor = System.Drawing.Color.Transparent;
             this.labPortaviones.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labPortaviones.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labPortaviones.Location = new System.Drawing.Point(723, 51);
@@ -97,6 +97,7 @@ namespace BattelShip
             // labSubmarino
             // 
             this.labSubmarino.AutoSize = true;
+            this.labSubmarino.BackColor = System.Drawing.Color.Transparent;
             this.labSubmarino.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labSubmarino.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labSubmarino.Location = new System.Drawing.Point(722, 139);
@@ -109,6 +110,7 @@ namespace BattelShip
             // labDestructor
             // 
             this.labDestructor.AutoSize = true;
+            this.labDestructor.BackColor = System.Drawing.Color.Transparent;
             this.labDestructor.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDestructor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labDestructor.Location = new System.Drawing.Point(723, 229);
@@ -121,6 +123,7 @@ namespace BattelShip
             // labPatrullero
             // 
             this.labPatrullero.AutoSize = true;
+            this.labPatrullero.BackColor = System.Drawing.Color.Transparent;
             this.labPatrullero.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labPatrullero.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labPatrullero.Location = new System.Drawing.Point(723, 320);
@@ -172,6 +175,7 @@ namespace BattelShip
             // 
             // pic_Submarine
             // 
+            this.pic_Submarine.BackColor = System.Drawing.Color.Transparent;
             this.pic_Submarine.BackgroundImage = global::BattelShip.Properties.Resources.submarine;
             this.pic_Submarine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_Submarine.Location = new System.Drawing.Point(550, 126);
@@ -183,6 +187,7 @@ namespace BattelShip
             // 
             // pic_Patrol
             // 
+            this.pic_Patrol.BackColor = System.Drawing.Color.Transparent;
             this.pic_Patrol.BackgroundImage = global::BattelShip.Properties.Resources.patrol;
             this.pic_Patrol.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_Patrol.Location = new System.Drawing.Point(641, 311);
@@ -194,6 +199,7 @@ namespace BattelShip
             // 
             // pic_Destroyer
             // 
+            this.pic_Destroyer.BackColor = System.Drawing.Color.Transparent;
             this.pic_Destroyer.BackgroundImage = global::BattelShip.Properties.Resources.destroyer;
             this.pic_Destroyer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pic_Destroyer.Location = new System.Drawing.Point(600, 215);
@@ -219,6 +225,8 @@ namespace BattelShip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::BattelShip.Properties.Resources.fondoMar;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 570);
             this.Controls.Add(this.butContinue);
             this.Controls.Add(this.labPatrullero);
@@ -234,7 +242,7 @@ namespace BattelShip
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(796, 448);
             this.Name = "Form1";
