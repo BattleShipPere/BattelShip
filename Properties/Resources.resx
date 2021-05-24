@@ -151,6 +151,9 @@
   <data name="Boton Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Boton Start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Boton_Continue_Selec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Boton_Continue_Selec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Boton_Continue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Boton_Continue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,7 +169,7 @@
   <data name="Boton_Reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Boton_Reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Boton_Continue_Selec" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Boton_Continue_Selec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ExitBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\ExitBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
