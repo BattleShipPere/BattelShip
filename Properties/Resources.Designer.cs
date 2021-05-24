@@ -63,6 +63,26 @@ namespace BattelShip.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Boton_Continue {
+            get {
+                object obj = ResourceManager.GetObject("Boton_Continue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boton_Continue_Selec {
+            get {
+                object obj = ResourceManager.GetObject("Boton_Continue_Selec", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton_Exit {
             get {
                 object obj = ResourceManager.GetObject("Boton Exit", resourceCulture);
