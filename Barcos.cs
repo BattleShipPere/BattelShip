@@ -38,6 +38,5 @@ namespace BattelShip
         {
             this.posicionCelda = posicion;
         }
-
     }
 }

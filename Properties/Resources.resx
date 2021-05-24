@@ -130,8 +130,8 @@
   <data name="patrol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\patrol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Boton_Continue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Boton_Continue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Eje_Y_Selec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Eje_Y_Selec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Eje_Y" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Eje_Y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,14 +160,17 @@
   <data name="Boton_Continue_Selec" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Boton_Continue_Selec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Eje_Y_Selec" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Eje_Y_Selec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Boton_Continue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Boton_Continue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="carrier" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\carrier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Boton_Start_Selec" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Boton_Start_Selec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondoMar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\fondoMar.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Eje_X" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Eje_X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,7 +181,7 @@
   <data name="Eje_X_Selec" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\Eje_X_Selec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondoMar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\fondoMar.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondoFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\fondoFinal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

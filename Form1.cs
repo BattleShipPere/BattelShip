@@ -15,16 +15,16 @@ namespace BattelShip
     // Variables row and column
         int totalCols;
         int totalRows;
-    // List<>
+    //Colores
+        public static Color red = Color.FromArgb(252, 92, 101);
+        public static Color green = Color.FromArgb(32, 191, 107);
+        public static Color blue = Color.FromArgb(116, 185, 255);
+        // List<>
         List<Control> casillasCorrectas = new List<Control>();  // Ubicaciones no guardadas
         List<Control> casillasMarcadas = new List<Control>();  // Ubicaciones de Barcos.
-        List<Barcos> barcosColocados = new List<Barcos>();
+        List<Object> barcosColocados = new List<Object>();
     // True == Eje X ; False == Eje Y
-        bool eje = true; 
-    // Colores
-        Color red = Color.FromArgb(252, 92, 101);
-        Color green = Color.FromArgb(32, 191, 107);
-        Color blue = Color.FromArgb(116, 185, 255);
+        bool eje = true;
     // Barcos sin posicion
         Barcos portaviones = new Barcos(4, "portaviones");
         int countPort = 1;
@@ -342,6 +342,13 @@ namespace BattelShip
         {
             if (eje) Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_X;
             else Button_Rotar.BackgroundImage = global::BattelShip.Properties.Resources.Eje_Y;
+        }
+
+        private void butContinue_Click(object sender, EventArgs e)
+        {        
+            Form3 form3 = new Form3(barcosColocados);
+            form3.Show();
+            Hide();
         }
     }
 

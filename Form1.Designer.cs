@@ -159,6 +159,7 @@ namespace BattelShip
             this.butContinue.Size = new System.Drawing.Size(207, 82);
             this.butContinue.TabIndex = 12;
             this.butContinue.UseVisualStyleBackColor = false;
+            this.butContinue.Click += new System.EventHandler(this.butContinue_Click);
             this.butContinue.MouseLeave += new System.EventHandler(this.butContinue_MouseLeave);
             this.butContinue.MouseHover += new System.EventHandler(this.butContinue_MouseHover);
             // 
@@ -509,7 +510,8 @@ namespace BattelShip
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BattelShip.Properties.Resources.fondoMar;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(782, 601);
+            this.ClientSize = new System.Drawing.Size(778, 573);
+            this.ControlBox = false;
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -544,9 +546,10 @@ namespace BattelShip
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(794, 442);
+            this.MaximumSize = new System.Drawing.Size(794, 612);
+            this.MinimumSize = new System.Drawing.Size(794, 612);
             this.Name = "Form1";
             this.Text = "Coloca los barcos";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));

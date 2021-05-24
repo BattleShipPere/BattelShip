@@ -21,13 +21,12 @@ namespace BattelShip
         {
             Form1 f1 = new Form1();
             f1.Show();
-            Form2_PantallaInicial f2 = new Form2_PantallaInicial();
-            Visible = false;
+            Hide();
         }
 
         private void Button_Exit_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void Button_Start_MouseHover(object sender, EventArgs e)
