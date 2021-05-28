@@ -178,5 +178,11 @@
   <ItemGroup>
     <None Include="img\load1.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="img\but_reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\but_reset_hover.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

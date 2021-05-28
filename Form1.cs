@@ -288,11 +288,6 @@ namespace BattelShip
             }
         }
 
-        private void pic_Submarine_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
         private void actualizarLabels(Barcos b)
         {
             if (b == portaviones)
@@ -319,7 +314,6 @@ namespace BattelShip
                 labPatrullero.Text = "x " + countPatr;
                 if (countPatr == 0) labPatrullero.ForeColor = red;
             }
-            
         }
 
         private void butContinue_MouseHover(object sender, EventArgs e)
@@ -351,6 +345,55 @@ namespace BattelShip
             FormLoad1 formLoad1 = new FormLoad1(barcosColocados);
             formLoad1.Show();
             Hide();
+        }
+
+        private void butReset_Click(object sender, EventArgs e)
+        {
+            countPort = 1;
+            labPortaviones.Text = "x " + countPort;
+            labPortaviones.ForeColor = Color.Black;
+
+            countSub = 2;
+            labSubmarino.Text = "x " + countSub;
+            labSubmarino.ForeColor = Color.Black;
+
+            countDes = 3;
+            labDestructor.Text = "x " + countDes;
+            labDestructor.ForeColor = Color.Black;
+
+            countPatr = 4;
+            labPatrullero.Text = "x " + countPatr;
+            labPatrullero.ForeColor = Color.Black;
+
+            if (butContinue.Enabled == true)
+            {
+                butContinue.Enabled = false;
+                butContinue.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Continue_Disabled;
+            }
+
+            foreach (Control casilla in casillasMarcadas)
+            {
+                casilla.BackColor = blue;
+            }
+            foreach (Barcos b in barcosColocados)
+            {
+                b.getPosicionCelda().Clear();
+            }
+
+            casillasCorrectas.Clear();
+            casillasMarcadas.Clear();
+            barcosColocados.Clear();
+        }
+
+        private void butReset_MouseHover(object sender, EventArgs e)
+        {
+            butReset.BackgroundImage = global::BattelShip.Properties.Resources.but_reset_hover;
+
+        }
+        private void butReset_MouseLeave(object sender, EventArgs e)
+        {
+            butReset.BackgroundImage = global::BattelShip.Properties.Resources.but_reset;
+
         }
     }
 
