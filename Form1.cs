@@ -53,6 +53,7 @@ namespace BattelShip
             table_tablero.BackColor = blue;
 
             // barcoSeleccionado = destructor1;
+            butContinue.Enabled = false;
 
             table_tablero.BackColor = Color.Transparent;
             totalCols = table_tablero.ColumnCount;
