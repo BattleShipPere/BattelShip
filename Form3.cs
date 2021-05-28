@@ -85,7 +85,12 @@ namespace BattelShip
                     pic_box.BackColor = red;
                     tocado = true;
                     sonidoTocado.Start();
-                    return true;                
+                    if (b.getPosicionCelda().Count == 0)
+                    {
+                       MessageBox.Show(b.getNombre().ToUpper() + " HUNDIDO");
+                    }
+                    return true; 
+                    
                 }
             }
             if(!tocado) {
