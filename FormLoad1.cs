@@ -24,9 +24,7 @@ namespace BattelShip
         private void FormLoad1_Load(object sender, EventArgs e)
         {
             pic_Box_Load.Load(@"../img/load1.gif");
-            //pic_Box_Load.SizeMode = 
-            //pic_Box_Load.Location = new Point(this.Width / 2 - pic_Box_Load.Width / 2,
-               //this.Height / 2 - pic_Box_Load.Height / 2);
+            
         }
 
         private void timerLoad_Tick(object sender, EventArgs e)
