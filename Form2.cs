@@ -15,6 +15,7 @@ namespace BattelShip
         public Form2_PantallaInicial()
         {
             InitializeComponent();
+            sounds.Musica.PlayLooping();
         }
 
         private void Button_Start_Click(object sender, EventArgs e)

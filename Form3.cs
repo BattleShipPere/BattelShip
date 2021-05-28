@@ -46,6 +46,7 @@ namespace BattelShip
                     pic_Box.Name = i + "" + u;
                     void pic_Box_Click(Object sender, EventArgs e)
                     {
+                        sounds.Disparo.Play();
                         comprobarDisparo(pic_Box);
                         if(fallos > 20)
                         {
@@ -82,17 +83,15 @@ namespace BattelShip
                     b.getPosicionCelda().RemoveAt(b.getPosicionCelda().IndexOf(pic_box.Name));
                     pic_box.BackColor = red;
                     tocado = true;
-                }
-                else
-                {
-                  
+                    sonidoTocado.Start();
+                    return true;                
                 }
             }
             if(!tocado) {
                 fallos++;
                 labelFallos.Text = "Fallos: " + fallos;
                 pic_box.BackColor = Color.Transparent;
-
+                sonidoAgua.Start();
             }
             return tocado;
         }
@@ -107,6 +106,26 @@ namespace BattelShip
                 } 
             }
             return true;
+        }
+
+        private void sonidoTocado_Tick(object sender, EventArgs e)
+        {
+            sounds.Tocado.Play();
+            volverMusica.Start();
+            sonidoTocado.Stop();
+        }
+
+        private void sonidoAgua_Tick(object sender, EventArgs e)
+        {
+            sounds.Agua.Play();
+            volverMusica.Start();
+            sonidoAgua.Stop();
+        }
+
+        private void volverMusica_Tick(object sender, EventArgs e)
+        {
+            sounds.Musica.Play();
+            volverMusica.Stop();
         }
     }
 }
