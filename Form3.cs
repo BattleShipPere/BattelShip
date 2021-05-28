@@ -112,21 +112,13 @@ namespace BattelShip
         private void sonidoTocado_Tick(object sender, EventArgs e)
         {
             sounds.Tocado.Play();
-            volverMusica.Start();
             sonidoTocado.Stop();
         }
 
         private void sonidoAgua_Tick(object sender, EventArgs e)
         {
             sounds.Agua.Play();
-            volverMusica.Start();
             sonidoAgua.Stop();
-        }
-
-        private void volverMusica_Tick(object sender, EventArgs e)
-        {
-            sounds.Musica.Play();
-            volverMusica.Stop();
-        }
+        }     
     }
 }

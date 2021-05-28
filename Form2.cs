@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,7 +16,10 @@ namespace BattelShip
         public Form2_PantallaInicial()
         {
             InitializeComponent();
-            sounds.Musica.PlayLooping();
+            musica.settings.setMode("loop", true);
+            musica.URL = System.IO.Path.Combine(
+                            System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location),
+                            "music.wav");       
         }
 
         private void Button_Start_Click(object sender, EventArgs e)
@@ -48,6 +52,11 @@ namespace BattelShip
         private void Button_Exit_MouseLeave(object sender, EventArgs e)
         {
             this.Button_Exit.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Exit;
+        }
+
+        private void Form2_PantallaInicial_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

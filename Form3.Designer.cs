@@ -55,7 +55,6 @@ namespace BattelShip
             this.labelFallos = new System.Windows.Forms.Label();
             this.sonidoTocado = new System.Windows.Forms.Timer(this.components);
             this.sonidoAgua = new System.Windows.Forms.Timer(this.components);
-            this.volverMusica = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label20
@@ -375,11 +374,6 @@ namespace BattelShip
             this.sonidoAgua.Interval = 1500;
             this.sonidoAgua.Tick += new System.EventHandler(this.sonidoAgua_Tick);
             // 
-            // volverMusica
-            // 
-            this.volverMusica.Interval = 2000;
-            this.volverMusica.Tick += new System.EventHandler(this.volverMusica_Tick);
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,6 +443,5 @@ namespace BattelShip
         private System.Windows.Forms.Label labelFallos;
         private System.Windows.Forms.Timer sonidoTocado;
         private System.Windows.Forms.Timer sonidoAgua;
-        private System.Windows.Forms.Timer volverMusica;
     }
 }

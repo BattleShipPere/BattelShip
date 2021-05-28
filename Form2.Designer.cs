@@ -33,7 +33,9 @@ namespace BattelShip
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Button_Start = new System.Windows.Forms.Button();
             this.Button_Exit = new System.Windows.Forms.Button();
+            this.musica = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musica)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -85,6 +87,16 @@ namespace BattelShip
             this.Button_Exit.MouseLeave += new System.EventHandler(this.Button_Exit_MouseLeave);
             this.Button_Exit.MouseHover += new System.EventHandler(this.Button_Exit_MouseHover);
             // 
+            // musica
+            // 
+            this.musica.Enabled = true;
+            this.musica.Location = new System.Drawing.Point(12, 12);
+            this.musica.Name = "musica";
+            this.musica.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("musica.OcxState")));
+            this.musica.Size = new System.Drawing.Size(0, 0);
+            this.musica.TabIndex = 5;
+            this.musica.Visible = false;
+            // 
             // Form2_PantallaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -94,6 +106,7 @@ namespace BattelShip
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(907, 533);
             this.ControlBox = false;
+            this.Controls.Add(this.musica);
             this.Controls.Add(this.Button_Exit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Button_Start);
@@ -103,7 +116,9 @@ namespace BattelShip
             this.Name = "Form2_PantallaInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to the BattleShilp!";
+            this.Load += new System.EventHandler(this.Form2_PantallaInicial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musica)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -112,5 +127,6 @@ namespace BattelShip
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Button_Start;
         private System.Windows.Forms.Button Button_Exit;
+        private AxWMPLib.AxWindowsMediaPlayer musica;
     }
 }
