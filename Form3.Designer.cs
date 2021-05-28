@@ -358,10 +358,10 @@ namespace BattelShip
             // 
             this.labelFallos.AutoSize = true;
             this.labelFallos.BackColor = System.Drawing.Color.Transparent;
-            this.labelFallos.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.labelFallos.Location = new System.Drawing.Point(684, 9);
+            this.labelFallos.Font = new System.Drawing.Font("Mistral", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.labelFallos.Location = new System.Drawing.Point(609, 9);
             this.labelFallos.Name = "labelFallos";
-            this.labelFallos.Size = new System.Drawing.Size(86, 27);
+            this.labelFallos.Size = new System.Drawing.Size(146, 48);
             this.labelFallos.TabIndex = 54;
             this.labelFallos.Text = "Fallos: 0";
             // 

@@ -26,6 +26,7 @@ namespace BattelShip
             table_tablero.BackColor = Color.Transparent;
             totalCols = table_tablero.ColumnCount;
             totalRows = table_tablero.RowCount;
+            labelFallos.ForeColor = red;
             foreach(Barcos b in barc)
             {
                 this.barcos.Add(b);

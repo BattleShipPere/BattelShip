@@ -516,10 +516,10 @@ namespace BattelShip
             this.butReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.butReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.butReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butReset.Location = new System.Drawing.Point(563, 387);
+            this.butReset.Location = new System.Drawing.Point(540, 374);
             this.butReset.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.butReset.Name = "butReset";
-            this.butReset.Size = new System.Drawing.Size(176, 74);
+            this.butReset.Size = new System.Drawing.Size(223, 83);
             this.butReset.TabIndex = 33;
             this.butReset.UseVisualStyleBackColor = false;
             this.butReset.Click += new System.EventHandler(this.butReset_Click);
