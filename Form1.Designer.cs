@@ -61,6 +61,7 @@ namespace BattelShip
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.butReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Submarine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Patrol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Destroyer)).BeginInit();
@@ -146,6 +147,7 @@ namespace BattelShip
             this.butContinue.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Continue_Disabled;
             this.butContinue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butContinue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butContinue.Enabled = false;
             this.butContinue.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.butContinue.FlatAppearance.BorderSize = 0;
             this.butContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -486,6 +488,27 @@ namespace BattelShip
             this.label20.TabIndex = 32;
             this.label20.Text = "K";
             // 
+            // butReset
+            // 
+            this.butReset.BackColor = System.Drawing.Color.Transparent;
+            this.butReset.BackgroundImage = global::BattelShip.Properties.Resources.but_reset;
+            this.butReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.butReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.butReset.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.butReset.FlatAppearance.BorderSize = 0;
+            this.butReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.butReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.butReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butReset.Location = new System.Drawing.Point(826, 579);
+            this.butReset.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butReset.Name = "butReset";
+            this.butReset.Size = new System.Drawing.Size(310, 126);
+            this.butReset.TabIndex = 33;
+            this.butReset.UseVisualStyleBackColor = false;
+            this.butReset.Click += new System.EventHandler(this.butReset_Click);
+            this.butReset.MouseLeave += new System.EventHandler(this.butReset_MouseLeave);
+            this.butReset.MouseHover += new System.EventHandler(this.butReset_MouseHover);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -494,6 +517,7 @@ namespace BattelShip
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1158, 855);
             this.ControlBox = false;
+            this.Controls.Add(this.butReset);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -577,6 +601,7 @@ namespace BattelShip
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button butReset;
     }
 }
 
