@@ -26,6 +26,7 @@ namespace BattelShip
 
         private void TiempoVideo_Tick(object sender, EventArgs e)
         {
+            
             if (count > 7) {
                 TiempoVideo.Stop();
                 Form2_PantallaInicial form2 = new Form2_PantallaInicial();
