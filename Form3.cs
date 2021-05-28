@@ -51,8 +51,10 @@ namespace BattelShip
                         if(fallos > 20)
                         {
                             MessageBox.Show("HAS PERDIDO");
-                            Form2_PantallaInicial form2 = new Form2_PantallaInicial();
-                            form2.Show();
+                            EndGame formEG = new EndGame();
+                            formEG.Show();
+                            //Form2_PantallaInicial form2 = new Form2_PantallaInicial();
+                            //form2.Show();
                             Hide();
                         }
                         else
@@ -60,8 +62,10 @@ namespace BattelShip
                             if (comprobarVictoria())
                             {
                                 MessageBox.Show("HAS GANADO");
-                                Form2_PantallaInicial form2 = new Form2_PantallaInicial();
-                                form2.Show();
+                                EndGame formEG = new EndGame();
+                                formEG.Show();
+                                //Form2_PantallaInicial form2 = new Form2_PantallaInicial();
+                                //form2.Show();
                                 Hide();
                             }
                         }

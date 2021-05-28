@@ -342,6 +342,7 @@ namespace BattelShip
         {
             //Form3 form3 = new Form3(barcosColocados);
             //form3.Show();
+
             FormLoad1 formLoad1 = new FormLoad1(barcosColocados);
             formLoad1.Show();
             Hide();
