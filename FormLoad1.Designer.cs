@@ -44,21 +44,26 @@ namespace BattelShip
             // 
             this.pic_Box_Load.BackgroundImage = global::BattelShip.Properties.Resources.load1;
             this.pic_Box_Load.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic_Box_Load.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pic_Box_Load.Image = global::BattelShip.Properties.Resources.load1;
-            this.pic_Box_Load.Location = new System.Drawing.Point(3, 3);
+            this.pic_Box_Load.Location = new System.Drawing.Point(0, 0);
+            this.pic_Box_Load.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic_Box_Load.Name = "pic_Box_Load";
-            this.pic_Box_Load.Size = new System.Drawing.Size(1366, 991);
+            this.pic_Box_Load.Size = new System.Drawing.Size(803, 646);
+            this.pic_Box_Load.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_Box_Load.TabIndex = 0;
             this.pic_Box_Load.TabStop = false;
             // 
             // FormLoad1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1205, 994);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(803, 646);
             this.ControlBox = false;
             this.Controls.Add(this.pic_Box_Load);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormLoad1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

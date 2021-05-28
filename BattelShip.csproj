@@ -66,6 +66,12 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClickStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClickStart.Designer.cs">
+      <DependentUpon>FormClickStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLoad1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClickStart.resx">
+      <DependentUpon>FormClickStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoad1.resx">
       <DependentUpon>FormLoad1.cs</DependentUpon>
@@ -183,6 +192,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\but_reset_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
