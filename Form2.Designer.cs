@@ -116,11 +116,9 @@ namespace BattelShip
             this.Name = "Form2_PantallaInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to the BattleShilp!";
-            this.Load += new System.EventHandler(this.Form2_PantallaInicial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.musica)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

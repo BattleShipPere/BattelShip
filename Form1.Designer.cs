@@ -149,7 +149,6 @@ namespace BattelShip
             this.butContinue.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Continue_Disabled;
             this.butContinue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.butContinue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.butContinue.Enabled = false;
             this.butContinue.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.butContinue.FlatAppearance.BorderSize = 0;
             this.butContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;

@@ -87,7 +87,7 @@ namespace BattelShip
                     sonidoTocado.Start();
                     if (b.getPosicionCelda().Count == 0)
                     {
-                       MessageBox.Show(b.getNombre().ToUpper() + " HUNDIDO");
+                        MessageBox.Show(b.getNombre().ToUpper() + " HUNDIDO");
                     }
                     return true; 
                     

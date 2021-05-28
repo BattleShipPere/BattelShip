@@ -53,10 +53,5 @@ namespace BattelShip
         {
             this.Button_Exit.BackgroundImage = global::BattelShip.Properties.Resources.Boton_Exit;
         }
-
-        private void Form2_PantallaInicial_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
