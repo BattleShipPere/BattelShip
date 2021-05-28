@@ -41,25 +41,28 @@ namespace BattelShip
             this.FinishVideo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FinishVideo.Enabled = true;
             this.FinishVideo.Location = new System.Drawing.Point(0, 0);
+            this.FinishVideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FinishVideo.Name = "FinishVideo";
             this.FinishVideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("FinishVideo.OcxState")));
-            this.FinishVideo.Size = new System.Drawing.Size(800, 450);
+            this.FinishVideo.Size = new System.Drawing.Size(1200, 675);
             this.FinishVideo.TabIndex = 0;
             // 
             // TiempoVideo
             // 
+            this.TiempoVideo.Enabled = true;
             this.TiempoVideo.Interval = 500;
             this.TiempoVideo.Tick += new System.EventHandler(this.TiempoVideo_Tick);
             // 
             // EndGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 675);
             this.ControlBox = false;
             this.Controls.Add(this.FinishVideo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EndGame";
             ((System.ComponentModel.ISupportInitialize)(this.FinishVideo)).EndInit();
             this.ResumeLayout(false);

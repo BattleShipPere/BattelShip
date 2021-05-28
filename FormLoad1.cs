@@ -32,9 +32,9 @@ namespace BattelShip
             if (count > 30)
             {
                 timerLoad.Stop();
-                Hide();
                 Form3 form3 = new Form3(barcosColocados);
                 form3.Show();
+                this.Hide();
 
             }
             else

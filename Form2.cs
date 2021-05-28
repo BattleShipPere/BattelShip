@@ -24,6 +24,7 @@ namespace BattelShip
 
         private void Button_Start_Click(object sender, EventArgs e)
         {
+            sounds.Tocado.Play();
             Form1 f1 = new Form1();
             f1.Show();
             Hide();
