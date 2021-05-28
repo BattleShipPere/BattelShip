@@ -314,7 +314,6 @@ namespace BattelShip
                 labPatrullero.Text = "x " + countPatr;
                 if (countPatr == 0) labPatrullero.ForeColor = red;
             }
-            
         }
 
         private void butContinue_MouseHover(object sender, EventArgs e)
