@@ -60,10 +60,9 @@ namespace BattelShip
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(137, 468);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Location = new System.Drawing.Point(206, 720);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(23, 27);
+            this.label20.Size = new System.Drawing.Size(32, 38);
             this.label20.TabIndex = 53;
             this.label20.Text = "K";
             // 
@@ -73,10 +72,9 @@ namespace BattelShip
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(137, 429);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(206, 660);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(20, 27);
+            this.label19.Size = new System.Drawing.Size(28, 38);
             this.label19.TabIndex = 52;
             this.label19.Text = "J";
             // 
@@ -86,10 +84,9 @@ namespace BattelShip
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(137, 392);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(206, 603);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(18, 27);
+            this.label18.Size = new System.Drawing.Size(26, 38);
             this.label18.TabIndex = 51;
             this.label18.Text = "I";
             // 
@@ -99,10 +96,9 @@ namespace BattelShip
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(137, 353);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(206, 543);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(24, 27);
+            this.label17.Size = new System.Drawing.Size(34, 38);
             this.label17.TabIndex = 50;
             this.label17.Text = "H";
             // 
@@ -112,10 +108,9 @@ namespace BattelShip
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(137, 310);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(206, 477);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(24, 27);
+            this.label16.Size = new System.Drawing.Size(34, 38);
             this.label16.TabIndex = 49;
             this.label16.Text = "G";
             // 
@@ -125,10 +120,9 @@ namespace BattelShip
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(137, 269);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(206, 414);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(22, 27);
+            this.label15.Size = new System.Drawing.Size(31, 38);
             this.label15.TabIndex = 48;
             this.label15.Text = "F";
             // 
@@ -138,10 +132,9 @@ namespace BattelShip
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(137, 230);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(206, 354);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(24, 27);
+            this.label14.Size = new System.Drawing.Size(33, 38);
             this.label14.TabIndex = 47;
             this.label14.Text = "D";
             // 
@@ -151,10 +144,9 @@ namespace BattelShip
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(137, 193);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(206, 297);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(23, 27);
+            this.label13.Size = new System.Drawing.Size(33, 38);
             this.label13.TabIndex = 46;
             this.label13.Text = "C";
             // 
@@ -164,10 +156,9 @@ namespace BattelShip
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(137, 152);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(206, 234);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 27);
+            this.label12.Size = new System.Drawing.Size(33, 38);
             this.label12.TabIndex = 45;
             this.label12.Text = "B";
             // 
@@ -177,10 +168,9 @@ namespace BattelShip
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(137, 109);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(206, 168);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(23, 27);
+            this.label11.Size = new System.Drawing.Size(32, 38);
             this.label11.TabIndex = 44;
             this.label11.Text = "A";
             // 
@@ -190,10 +180,9 @@ namespace BattelShip
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(603, 70);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(904, 108);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 27);
+            this.label10.Size = new System.Drawing.Size(32, 38);
             this.label10.TabIndex = 43;
             this.label10.Text = "9";
             // 
@@ -203,10 +192,9 @@ namespace BattelShip
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(561, 70);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(842, 108);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 27);
+            this.label9.Size = new System.Drawing.Size(32, 38);
             this.label9.TabIndex = 42;
             this.label9.Text = "8";
             // 
@@ -216,10 +204,9 @@ namespace BattelShip
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(513, 70);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(770, 108);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 27);
+            this.label8.Size = new System.Drawing.Size(29, 38);
             this.label8.TabIndex = 41;
             this.label8.Text = "7";
             // 
@@ -229,10 +216,9 @@ namespace BattelShip
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(469, 70);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(704, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 27);
+            this.label7.Size = new System.Drawing.Size(31, 38);
             this.label7.TabIndex = 40;
             this.label7.Text = "6";
             // 
@@ -242,10 +228,9 @@ namespace BattelShip
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(419, 70);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(628, 108);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(22, 27);
+            this.label6.Size = new System.Drawing.Size(31, 38);
             this.label6.TabIndex = 39;
             this.label6.Text = "5";
             // 
@@ -255,10 +240,9 @@ namespace BattelShip
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(373, 70);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(560, 108);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 27);
+            this.label5.Size = new System.Drawing.Size(31, 38);
             this.label5.TabIndex = 38;
             this.label5.Text = "4";
             // 
@@ -268,10 +252,9 @@ namespace BattelShip
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(324, 70);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(486, 108);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 27);
+            this.label4.Size = new System.Drawing.Size(30, 38);
             this.label4.TabIndex = 37;
             this.label4.Text = "3";
             // 
@@ -281,10 +264,9 @@ namespace BattelShip
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(277, 70);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(416, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 27);
+            this.label3.Size = new System.Drawing.Size(31, 38);
             this.label3.TabIndex = 36;
             this.label3.Text = "2";
             // 
@@ -294,10 +276,9 @@ namespace BattelShip
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(229, 70);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(344, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 27);
+            this.label2.Size = new System.Drawing.Size(30, 38);
             this.label2.TabIndex = 35;
             this.label2.Text = "1";
             // 
@@ -307,10 +288,9 @@ namespace BattelShip
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(181, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(272, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 27);
+            this.label1.Size = new System.Drawing.Size(32, 38);
             this.label1.TabIndex = 34;
             this.label1.Text = "0";
             // 
@@ -332,9 +312,10 @@ namespace BattelShip
             this.table_tablero.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.table_tablero.Location = new System.Drawing.Point(175, 100);
-            this.table_tablero.MaximumSize = new System.Drawing.Size(466, 405);
-            this.table_tablero.MinimumSize = new System.Drawing.Size(466, 405);
+            this.table_tablero.Location = new System.Drawing.Point(262, 154);
+            this.table_tablero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.table_tablero.MaximumSize = new System.Drawing.Size(699, 623);
+            this.table_tablero.MinimumSize = new System.Drawing.Size(699, 623);
             this.table_tablero.Name = "table_tablero";
             this.table_tablero.RowCount = 10;
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -347,7 +328,7 @@ namespace BattelShip
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.table_tablero.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.table_tablero.Size = new System.Drawing.Size(466, 405);
+            this.table_tablero.Size = new System.Drawing.Size(699, 623);
             this.table_tablero.TabIndex = 33;
             // 
             // labelFallos
@@ -355,19 +336,20 @@ namespace BattelShip
             this.labelFallos.AutoSize = true;
             this.labelFallos.BackColor = System.Drawing.Color.Transparent;
             this.labelFallos.Font = new System.Drawing.Font("Mistral", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.labelFallos.Location = new System.Drawing.Point(684, 9);
+            this.labelFallos.Location = new System.Drawing.Point(1026, 14);
+            this.labelFallos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFallos.Name = "labelFallos";
-            this.labelFallos.Size = new System.Drawing.Size(86, 27);
+            this.labelFallos.Size = new System.Drawing.Size(119, 38);
             this.labelFallos.TabIndex = 54;
             this.labelFallos.Text = "Fallos: 0";
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BattelShip.Properties.Resources.fondoFinal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(782, 601);
+            this.ClientSize = new System.Drawing.Size(1164, 898);
             this.ControlBox = false;
             this.Controls.Add(this.labelFallos);
             this.Controls.Add(this.label20);
@@ -392,11 +374,13 @@ namespace BattelShip
             this.Controls.Add(this.label1);
             this.Controls.Add(this.table_tablero);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(798, 640);
+            this.MaximumSize = new System.Drawing.Size(1186, 954);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(798, 640);
+            this.MinimumSize = new System.Drawing.Size(1186, 954);
             this.Name = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.ResumeLayout(false);
             this.PerformLayout();

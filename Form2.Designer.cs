@@ -39,9 +39,10 @@ namespace BattelShip
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BattelShip.Properties.Resources.Img_Tituto;
-            this.pictureBox1.Location = new System.Drawing.Point(196, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(294, 18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(578, 113);
+            this.pictureBox1.Size = new System.Drawing.Size(867, 174);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -57,9 +58,10 @@ namespace BattelShip
             this.Button_Start.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.Button_Start.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Button_Start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Start.Location = new System.Drawing.Point(354, 310);
+            this.Button_Start.Location = new System.Drawing.Point(531, 477);
+            this.Button_Start.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button_Start.Name = "Button_Start";
-            this.Button_Start.Size = new System.Drawing.Size(218, 107);
+            this.Button_Start.Size = new System.Drawing.Size(327, 165);
             this.Button_Start.TabIndex = 1;
             this.Button_Start.UseVisualStyleBackColor = false;
             this.Button_Start.Click += new System.EventHandler(this.Button_Start_Click);
@@ -76,9 +78,10 @@ namespace BattelShip
             this.Button_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.Button_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Button_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Exit.Location = new System.Drawing.Point(354, 423);
+            this.Button_Exit.Location = new System.Drawing.Point(531, 651);
+            this.Button_Exit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Button_Exit.Name = "Button_Exit";
-            this.Button_Exit.Size = new System.Drawing.Size(218, 107);
+            this.Button_Exit.Size = new System.Drawing.Size(327, 165);
             this.Button_Exit.TabIndex = 4;
             this.Button_Exit.UseVisualStyleBackColor = false;
             this.Button_Exit.Click += new System.EventHandler(this.Button_Exit_Click);
@@ -87,20 +90,22 @@ namespace BattelShip
             // 
             // Form2_PantallaInicial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::BattelShip.Properties.Resources.Inicio;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(913, 539);
+            this.ClientSize = new System.Drawing.Size(1360, 803);
             this.ControlBox = false;
             this.Controls.Add(this.Button_Exit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Button_Start);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(929, 578);
-            this.MinimumSize = new System.Drawing.Size(929, 578);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(1382, 859);
+            this.MinimumSize = new System.Drawing.Size(1382, 859);
             this.Name = "Form2_PantallaInicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to the BattleShilp!";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

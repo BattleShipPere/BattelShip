@@ -345,9 +345,11 @@ namespace BattelShip
         }
 
         private void butContinue_Click(object sender, EventArgs e)
-        {        
-            Form3 form3 = new Form3(barcosColocados);
-            form3.Show();
+        {
+            //Form3 form3 = new Form3(barcosColocados);
+            //form3.Show();
+            FormLoad1 formLoad1 = new FormLoad1(barcosColocados);
+            formLoad1.Show();
             Hide();
         }
     }
